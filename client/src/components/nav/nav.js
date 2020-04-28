@@ -1,40 +1,37 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import './nav.scss';
-import { connect } from 'react-redux';
 
-export const Nav = () => {
+const Nav = () => {
 	return (
 		<div className="nav">
 			<div className="nav__container">
-				<NavLink exact to="/" className="nav__title nav__link">
+				<NavLink strict exact to="/" className="nav__title nav__link" activeClassName="active">
 					Feel
 				</NavLink>
-				<NavLink exact to="/massage" className="nav__massage nav__link">
+				<NavLink strict exact to="/massage" className="nav__massage nav__link" activeClassName="active">
 					Thai Massage
 				</NavLink>
-				<NavLink exact to="/yoga" className="nav__yoga nav__link">
+				<NavLink strict exact to="/yoga" className="nav__yoga nav__link" activeClassName="active">
 					Yoga
 				</NavLink>
-				<NavLink exact to="/about" className="nav__about nav__link">
+				<NavLink strict exact to="/about" className="nav__about nav__link" activeClassName="active">
 					About
 				</NavLink>
-				<NavLink exact to="/contact" className="nav__contact nav__link">
+				<NavLink strict exact to="/contact" className="nav__contact nav__link" activeClassName="active">
 					Contact
 				</NavLink>
-				<NavLink exact to="/blog" className="nav__blog nav__link">
+				<NavLink strict exact to="/blog" className="nav__blog nav__link" activeClassName="active">
 					Blog
 				</NavLink>
 			</div>
 			<div className="nav__container nav__book-container">
-				<NavLink exact to="/contact" className="nav__book-now nav__link">
+				<Link exact to="/contact" className="nav__book-now nav__link">
 					Book Now
-				</NavLink>
+				</Link>
 			</div>
 		</div>
 	);
 };
 
-const mapStateToProps = (state) => ({});
-
-export default connect(mapStateToProps)(Nav);
+export default Nav;
