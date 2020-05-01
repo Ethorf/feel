@@ -1,3 +1,5 @@
+@import '../../misc/mixins.scss';
+
 .nav {
 	display: flex;
 	justify-content: space-between;
@@ -5,37 +7,60 @@
 	text-decoration: none;
 	font-family: 'Manrope', sans-serif;
 	padding: 10px 0;
+	position: relative;
+	z-index: 4;
+	background-color: white;
 
 	&__container {
 		display: flex;
 		align-items: center;
 		margin: 0;
-		width: 40%;
+		width: 30%;
 	}
 	&__book-container {
 		justify-content: flex-end;
 	}
 	&__link {
+		position: relative;
 		text-decoration: none;
-		color: slategrey;
+		color: rgb(112, 128, 144);
 		font-size: 1.3em;
 		margin: 0 2%;
-		transition: all 0.3s;
-		&:hover {
-			color: navy;
-			transition: all 0.3s;
+		width: 70%;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: -2px;
+			//this determines where the animation starts??
+			left: 0%;
+			background-color: rgba(70, 130, 180, 0.3);
+			opacity: 0;
+			//scale X this notation determines 0 to be 0% and 1 to be 100%
+			transform: scaleX(0);
+			//ease-in-out means its slow at beginning and end
+			//the last art is a delay
+			transition: all 0.5s ease-in-out 0s;
+		}
+		&:hover:before {
+			opacity: 1;
+			left: 0;
+			transform: scaleX(1);
 		}
 	}
 	&__title {
-		font-size: 1.9em;
+		font-size: 2.1em;
 		font-weight: 500;
 		color: navy;
-		margin-left: 1vw;
+		margin: 0 2vw;
+		text-decoration: none;
 	}
 	&__book-now {
-		border: 1px solid grey;
-		padding: 1% 3%;
-		margin-right: 6%;
-		border-radius: 3px;
+		@include book-now-button();
 	}
+}
+.active {
+	color: rgb(122, 148, 164);
 }

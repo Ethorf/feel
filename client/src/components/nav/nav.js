@@ -6,11 +6,11 @@ const Nav = () => {
 	return (
 		<div className="nav">
 			<div className="nav__container">
-				<NavLink strict exact to="/" className="nav__title nav__link" activeClassName="active">
+				<Link strict exact to="/" className="nav__title">
 					Feel
-				</NavLink>
+				</Link>
 				<NavLink strict exact to="/massage" className="nav__massage nav__link" activeClassName="active">
-					Thai Massage
+					Massage
 				</NavLink>
 				<NavLink strict exact to="/yoga" className="nav__yoga nav__link" activeClassName="active">
 					Yoga
@@ -26,7 +26,7 @@ const Nav = () => {
 				</NavLink>
 			</div>
 			<div className="nav__container nav__book-container">
-				<Link exact to="/contact" className="nav__book-now nav__link">
+				<Link exact to="/contact" className="nav__book-now">
 					Book Now
 				</Link>
 			</div>
