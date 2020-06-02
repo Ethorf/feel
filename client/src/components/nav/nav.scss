@@ -1,4 +1,4 @@
-@import '../../misc/mixins.scss';
+@import '../../misc/globalStyles.scss';
 
 .nav {
 	display: flex;
@@ -35,7 +35,7 @@
 			height: 2px;
 			bottom: -2px;
 			//this determines where the animation starts??
-			left: 0%;
+			left: -50%;
 			background-color: rgba(70, 130, 180, 0.3);
 			opacity: 0;
 			//scale X this notation determines 0 to be 0% and 1 to be 100%

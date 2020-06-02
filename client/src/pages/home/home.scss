@@ -1,4 +1,4 @@
-@import '../../misc/mixins.scss';
+@import '../../misc/globalStyles.scss';
 
 .home {
 	width: 102vw;
@@ -33,6 +33,7 @@
 	&__hero-img {
 		position: relative;
 		z-index: 2;
+		// width: 100%;
 	}
 	&__hero-title {
 		font-size: 3.7em;

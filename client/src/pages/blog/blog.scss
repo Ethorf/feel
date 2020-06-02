@@ -1,3 +1,9 @@
+@import '../../misc/globalStyles.scss';
+
 .blog {
-	opacity: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	opacity: 1;
 }
