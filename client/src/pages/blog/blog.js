@@ -30,7 +30,10 @@ export const Blog = ({ setAuth }) => {
 				) : (
 					blogPosts.map((item) => (
 						<div>
-							<h2>{item.title}</h2>
+							<div classname={`blog__title-date`}>
+								<h2>{item.title}</h2>
+								<h2>{item.date}</h2>
+							</div>
 							<p>{item.content}</p>
 						</div>
 					))

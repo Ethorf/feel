@@ -1,9 +1,11 @@
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const express = require('express');
+const compression = require('compression');
 const app = express();
 const path = require('path');
 const cors = require('cors');
+app.use(compression());
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
@@ -11,11 +13,7 @@ app.use(cookieParser());
 app.use(cors());
 app.use(express.json({ extended: false }));
 
-// app.get('/users', db.getUsers);
-// app.post('/users', db.createUser);
-
 app.use('/auth', require('./routes/jwtAuth'));
-
 app.use('/blog', require('./routes/blogPosts'));
 
 if (process.env.NODE_ENV === 'production') {
