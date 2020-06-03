@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import AddBlogPost from '../../pages/addBlogPost/addBlogPost.js';
+import './adminLogin.scss';
 
 export default function AdminLogin({ setAuth, isAuthenticated }) {
 	const [loginFormVisible, setLoginFormVisible] = useState(false);
@@ -47,31 +48,33 @@ export default function AdminLogin({ setAuth, isAuthenticated }) {
 	return (
 		<>
 			<div className={`admin-login ${isAuthenticated ? 'invisible' : 'visible'}`}>
-				<h2 onClick={toggleLoginFormVisible} className={`admin-login__button`}>
+				<h2 onClick={toggleLoginFormVisible} className={`admin-login__title`}>
 					Admin Login
 				</h2>
 				<form onSubmit={onSubmitForm} className={`admin-login__form `}>
-					<div className={`admin-login__input-container`}>
-						<h4 className={`admin-login__input-label`}>Email</h4>
-						<input
-							type="text"
-							name="email"
-							value={email}
-							onChange={(e) => onChange(e)}
-							className={`admin-login__input`}
-						></input>
+					<div className={`admin-login__inputs-container`}>
+						<div className={`admin-login__input-container`}>
+							<h4 className={`admin-login__input-label`}>Email</h4>
+							<input
+								type="text"
+								name="email"
+								value={email}
+								onChange={(e) => onChange(e)}
+								className={`admin-login__input`}
+							></input>
+						</div>
+						<div className={`admin-login__input-container`}>
+							<h4 className={`admin-login__input-label`}>Password</h4>
+							<input
+								type="password"
+								name="password"
+								value={password}
+								onChange={(e) => onChange(e)}
+								className={`admin-login__input`}
+							></input>
+						</div>
 					</div>
-					<div className={`admin-login__input-container`}>
-						<h4 className={`admin-login__input-label`}>Password</h4>
-						<input
-							type="password"
-							name="password"
-							value={password}
-							onChange={(e) => onChange(e)}
-							className={`admin-login__input`}
-						></input>
-					</div>
-					<button>Login</button>
+					<button className={`admin-login__button`}>Login</button>
 				</form>
 			</div>
 			{isAuthenticated ? <AddBlogPost setAuth={setAuth} /> : null}

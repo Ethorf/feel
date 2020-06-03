@@ -4,9 +4,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './blog.scss';
-// import  AdminLogin  from '../../components/adminLogin/adminLogin';
+import '../../misc/defaultPage.scss';
 
-export const Blog = ({ setAuth }) => {
+export const Blog = () => {
 	const [blogPosts, setBlogPosts] = useState(null);
 
 	const getBlogPosts = async () => {
@@ -29,10 +29,10 @@ export const Blog = ({ setAuth }) => {
 					<h2>No Blog Posts Created Yet</h2>
 				) : (
 					blogPosts.map((item) => (
-						<div>
-							<div classname={`blog__title-date`}>
-								<h2>{item.title}</h2>
-								<h2>{item.date}</h2>
+						<div className={`blog-post`}>
+							<div className={`blog-post__title-date`}>
+								<h2 className={`blog-post__title`}>{item.title}</h2>
+								<h3 className={`blog-post__date`}>{item.date}</h3>
 							</div>
 							<p>{item.content}</p>
 						</div>
@@ -42,13 +42,12 @@ export const Blog = ({ setAuth }) => {
 		);
 	};
 
-	console.log(blogPosts);
 	return (
-		<div className="view">
-			<div className="blog content">
-				<h1>Blog</h1>
-				{blogPosts ? <BlogPostsList /> : null}
-				<Link exact to="/adminLogin" className={`admin-login__button`}>
+		<div className="view ">
+			<div className="blog content default-page">
+				<h1 className="default-page__header">Blog</h1>
+				{blogPosts ? <BlogPostsList /> : <h2>Loading Posts...</h2>}
+				<Link exact to="/adminLogin" className={`blog__admin-login-button`}>
 					Admin Login
 				</Link>
 			</div>

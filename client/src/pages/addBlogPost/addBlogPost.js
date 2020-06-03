@@ -17,7 +17,7 @@ export default function AddBlogPost({ setAuth }) {
 	const onChange = (e) => setInputs({ ...inputs, [e.target.name]: e.target.value });
 
 	const addPost = async (e) => {
-		e.preventDefault();
+		// e.preventDefault();
 
 		try {
 			const body = { title, content };
@@ -37,13 +37,30 @@ export default function AddBlogPost({ setAuth }) {
 	return (
 		<div className={`add-blog-post`}>
 			<h1>Add A New Blog Post</h1>
-			<form onSubmit={addPost}>
-				<input type="title" name="title" value={title} onChange={(e) => onChange(e)}></input>
-				<textarea type="content" name="content" value={content} onChange={(e) => onChange(e)}></textarea>
-				<button>Add Post</button>
+			<form className={`add-blog-post__form`} onSubmit={addPost}>
+				<input
+					placeholder="title"
+					className={`add-blog-post__title-input`}
+					type="title"
+					name="title"
+					value={title}
+					onChange={(e) => onChange(e)}
+				></input>
+				<textarea
+					className={`add-blog-post__content-input`}
+					placeholder="post content"
+					type="content"
+					name="content"
+					value={content}
+					onChange={(e) => onChange(e)}
+				></textarea>
+
+				<button className={`add-blog-post__add-post-button`}>Add Post</button>
 			</form>
 
-			<button onClick={logout}>Logout</button>
+			<button className={`add-blog-post__logout-button`} onClick={logout}>
+				Logout
+			</button>
 		</div>
 	);
 }

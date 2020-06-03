@@ -1,16 +1,47 @@
 @mixin book-now-button() {
 	text-decoration: none;
-	border: 1px solid grey;
-	color: black;
-	padding: 1% 1.5vw;
+	border: 1px solid rgb(89, 127, 165);
+	color: rgba(245, 245, 245, 0.9);
+	font-size: 1.3rem;
+	padding: 1% 2.5vw;
+	display: flex;
+	justify-content: center;
 	margin-right: 6%;
 	border-radius: 4px;
-	background-color: white;
+	background-color: rgb(49, 110, 185);
+	transition: all 400ms;
+
 	&:hover {
-		color: navy;
+		transition: all 400ms;
+		color: white;
+		text-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+			0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+		border-radius: 5px;
+		box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+			0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
 	}
 }
+@mixin underline-gradient-blue-1() {
+	position: relative;
 
+	&:before {
+		content: '';
+		position: absolute;
+		width: 120%;
+		height: 2px;
+		bottom: -6px;
+		left: -0%;
+		background: linear-gradient(
+			90deg,
+			rgba(244, 246, 255, 0.6993172268907564) 0%,
+			rgba(236, 245, 250, 1) 7%,
+			rgba(159, 186, 244, 0.8) 80%,
+			rgba(252, 252, 252, 1) 100%
+		);
+		opacity: 1;
+		transition: all 0.7s ease-in-out 0s;
+	}
+}
 .invisible {
 	opacity: 0;
 	display: none;
