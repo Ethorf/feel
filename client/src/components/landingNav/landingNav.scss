@@ -1,0 +1,72 @@
+@import '../../misc/globalStyles.scss';
+
+.landing-nav {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	font-family: 'Manrope', sans-serif;
+	position: absolute;
+	background: transparent;
+	top: 3%;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 10;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		width: 30%;
+	}
+	&__link {
+		position: relative;
+		text-decoration: none;
+		color: rgb(154, 168, 182);
+		font-size: 1.3em;
+		margin: 0 4%;
+		width: 70%;
+		transition: all 500ms;
+
+		// &:before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	height: 2px;
+		// 	bottom: -2px;
+		// 	left: -50%;
+		// 	// background-color: rgba(70, 130, 180, 0.3);
+		// 	background: linear-gradient(
+		// 		90deg,
+		// 		rgba(244, 246, 255, 0.6993172268907564) 0%,
+		// 		rgba(236, 245, 250, 1) 7%,
+		// 		rgba(159, 186, 244, 0.8) 80%,
+		// 		rgba(252, 252, 252, 1) 100%
+		// 	);
+		// 	opacity: 0;
+		// 	transform: scaleX(0);
+		// 	transition: all 0.5s ease-in-out 0s;
+		// }
+		// &:hover:before {
+		// 	opacity: 1;
+		// 	left: 0;
+		// 	transform: scaleX(1);
+		// }
+		&:hover {
+			transition: all 500ms;
+			color: white;
+		}
+	}
+	&__title {
+		font-size: 2.1em;
+		font-weight: 500;
+		color: rgb(49, 110, 185);
+		margin: 0 2vw;
+		text-decoration: none;
+	}
+	&__book-now {
+		@include book-now-button();
+	}
+}
+.active {
+	color: rgba(63, 127, 191, 0.9);
+}

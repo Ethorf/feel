@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './blog.scss';
 import '../../misc/defaultPage.scss';
+import loginIcon from '../../assets/icons/login-icon.png';
 
 export const Blog = () => {
 	const [blogPosts, setBlogPosts] = useState(null);
@@ -43,13 +44,15 @@ export const Blog = () => {
 	};
 
 	return (
-		<div className="view ">
+		<div className="view">
 			<div className="blog content default-page">
-				<h1 className="default-page__header">Blog</h1>
-				{blogPosts ? <BlogPostsList /> : <h2>Loading Posts...</h2>}
-				<Link exact to="/adminLogin" className={`blog__admin-login-button`}>
-					Admin Login
-				</Link>
+				<div className="default-page__header-description-container">
+					<h1 className="default-page__header">Blog</h1>
+					{blogPosts ? <BlogPostsList /> : <h2>Loading Posts...</h2>}
+					<Link exact to="/adminLogin" className={`blog__admin-login-button`}>
+						Admin Login <img src={loginIcon} alt="login icon" className={`blog__login-icon`} />
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

@@ -1,3 +1,5 @@
+$main-blue: rgb(63, 123, 194);
+
 @mixin book-now-button() {
 	text-decoration: none;
 	border: 1px solid rgb(89, 127, 165);
@@ -10,6 +12,7 @@
 	border-radius: 4px;
 	background-color: rgb(49, 110, 185);
 	transition: all 400ms;
+	opacity: 0.7;
 
 	&:hover {
 		transition: all 400ms;
@@ -19,6 +22,7 @@
 		border-radius: 5px;
 		box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
 			0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+		opacity: 1;
 	}
 }
 @mixin underline-gradient-blue-1() {
@@ -42,14 +46,22 @@
 		transition: all 0.7s ease-in-out 0s;
 	}
 }
+
+@mixin text-shadow-1() {
+	text-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+}
+@mixin box-shadow-1() {
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+}
 .invisible {
 	opacity: 0;
 	display: none;
 	width: 0.01vw;
 	overflow: hidden;
-	color: black;
-	transition: all 2s;
-	animation: dnonefadeout 3s 1;
+	transition: all 500ms;
+	animation: dnonefadeout 1s 1;
 	@keyframes dnonefadeout {
 		0% {
 			display: flex;
@@ -67,10 +79,10 @@
 	}
 }
 .visible {
-	transition: all 2s;
+	transition: all 500ms;
 	display: flex;
 	z-index: 10;
-	animation: dnonefadein 3s 1;
+	animation: dnonefadein 1s 1;
 	@keyframes dnonefadein {
 		0% {
 			display: none;

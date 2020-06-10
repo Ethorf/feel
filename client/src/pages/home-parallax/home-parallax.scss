@@ -1,0 +1,88 @@
+@import '../../misc/globalStyles.scss';
+
+.home {
+	width: 100vw;
+	height: 100%;
+	font-family: 'Manrope', sans-serif;
+	display: flex;
+	justify-content: center;
+	scroll-padding: 100px 0px 0px 100px;
+	// font-family: 'Actor', sans-serif;
+	// font-family: 'Rock Salt', cursive;
+
+	&__hero-container {
+		width: 100%;
+		height: 100vh;
+		margin: 0;
+		top: 0vh;
+		display: flex;
+		position: absolute;
+		justify-content: center;
+	}
+	&__hero-overlay-container {
+		position: relative;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+	}
+	&__hero-overlay {
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		height: 100%;
+		top: 0%;
+		bottom: 0%;
+		opacity: 0.14;
+		background-color: black;
+	}
+	&__hero-img {
+		position: relative;
+		z-index: 2;
+		width: auto;
+		height: 100%;
+	}
+	&__hero-text-container {
+		z-index: 4;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		bottom: 20%;
+		opacity: 1;
+		transition: all 100ms;
+		scroll-padding: 100px 0px 0px 100px;
+	}
+	&__hero-title {
+		font-size: 4.7em;
+		color: white;
+		font-family: 'Rock Salt', cursive;
+		margin-bottom: 0;
+	}
+	&__hero-subtitle {
+		color: white;
+		font-size: 1.9em;
+		opacity: 0.9;
+		font-weight: 300;
+	}
+	&__book-now {
+		@include book-now-button();
+		width: 35%;
+	}
+	&__about-container {
+		height: 30vh;
+		width: 100vw;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 4;
+		background-color: white;
+	}
+}
+.test-button {
+	position: absolute;
+	top: 10vh;
+	z-index: 20;
+}

@@ -2,6 +2,8 @@
 	text-align: center;
 	width: 100%;
 	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .App-logo {
@@ -45,8 +47,8 @@
 
 .page {
 	position: absolute;
-	left: 15px;
-	right: 15px;
+	/* left: 15px; */
+	/* right: 15px; */
 }
 
 .page-enter {
@@ -68,4 +70,9 @@
 .page-exit-active {
 	opacity: 0;
 	transition: opacity 300ms;
+}
+
+html {
+	margin: 0;
+	padding: 0;
 }

@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './nav.scss';
 
 const Nav = () => {
+	const [offset, setOffset] = useState(0);
+	const [scrolled, setScrolled] = useState(false);
+
+	const parallaxShift = () => {
+		setOffset(window.pageYOffset);
+	};
+	useEffect(() => {
+		window.addEventListener('scroll', parallaxShift);
+		if (offset > 550) {
+			setScrolled(true);
+		} else if (offset < 550) {
+			setScrolled(false);
+		}
+	}, [offset]);
 	return (
-		<div className="nav">
+		<div className={`nav ${scrolled ? 'visible' : 'invisible'}`}>
 			<div className="nav__container">
 				<Link strict exact to="/" className="nav__title">
 					Feel
