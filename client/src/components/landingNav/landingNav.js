@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import './landingNav.scss';
 
 const LandingNav = () => {
@@ -18,55 +19,67 @@ const LandingNav = () => {
 		}
 	}, [offset]);
 	return (
-		<div className={`landing-nav ${scrolled ? 'invisible' : 'visible'}`}>
+		<nav className={`landing-nav ${scrolled ? 'invisible' : 'visible'}`}>
 			<div className="landing-nav__container">
-				<NavLink
-					strict
-					exact
-					to="/massage"
+				<Link
+					activeClass="active"
 					className="landing-nav__massage landing-nav__link"
-					activeClassName="active"
+					to="massage"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					duration={800}
 				>
 					Massage
-				</NavLink>
-				<NavLink
-					strict
-					exact
-					to="/yoga"
+				</Link>
+				<Link
+					to="yoga"
 					className="landing-nav__yoga landing-nav__link"
-					activeClassName="active"
+					activeClass="active"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					duration={800}
 				>
 					Yoga
-				</NavLink>
-				<NavLink
-					strict
-					exact
-					to="/about"
+				</Link>
+				<Link
+					activeClass="active"
 					className="landing-nav__about landing-nav__link"
-					activeClassName="active"
+					to="about"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					duration={800}
 				>
 					About
-				</NavLink>
-				<NavLink
+				</Link>
+				<Link
 					strict
 					exact
-					to="/contact"
+					to="contact"
 					className="landing-nav__contact landing-nav__link"
-					activeClassName="active"
+					activeClass="active"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					duration={800}
 				>
 					Contact
-				</NavLink>
-				<NavLink
-					strict
-					exact
-					to="/blog"
+				</Link>
+				<Link
+					spy={true}
+					smooth={true}
+					offset={-70}
+					duration={800}
+					to="blog"
 					className="landing-nav__blog landing-nav__link"
-					activeClassName="active"
+					activeClass="active"
 				>
 					Blog
-				</NavLink>
+				</Link>
 			</div>
-		</div>
+		</nav>
 	);
 };
 
