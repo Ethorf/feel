@@ -12,7 +12,7 @@ $main-blue: rgb(63, 123, 194);
 	border-radius: 4px;
 	background-color: rgb(49, 110, 185);
 	transition: all 400ms;
-	opacity: 0.8;
+	opacity: 0.9;
 
 	&:hover {
 		transition: all 400ms;
@@ -20,9 +20,9 @@ $main-blue: rgb(63, 123, 194);
 		text-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
 			0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
 		border-radius: 5px;
-		box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-			0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+		@include box-shadow-1();
 		opacity: 1;
+		cursor: pointer;
 	}
 }
 @mixin underline-gradient-blue-1() {
@@ -52,8 +52,8 @@ $main-blue: rgb(63, 123, 194);
 		0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
 }
 @mixin box-shadow-1() {
-	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-		0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
+		0 14.3px 17.9px rgba(0, 0, 0, 0.072);
 }
 .invisible {
 	opacity: 0;

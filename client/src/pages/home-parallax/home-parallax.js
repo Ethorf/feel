@@ -16,7 +16,6 @@ export const HomeParallax = () => {
 	const parallaxShift = () => {
 		setOffset(window.pageYOffset);
 	};
-	let aboutContainer = useRef(null);
 	useEffect(() => {
 		window.addEventListener('scroll', parallaxShift);
 	}, []);
@@ -33,10 +32,11 @@ export const HomeParallax = () => {
 					<div className="home__hero-overlay-container">
 						<img src={hero} className="home__hero-img"></img>
 						<div className="home__hero-overlay"></div>
+						<div className="home__hero-overlay home__hero-overlay-2"></div>
 					</div>
 					<div
 						className="home__hero-text-container"
-						style={{ top: 100 + offset / 2, opacity: (1 / offset) * 40 }}
+						style={{ bottom: 240 + offset / 2, opacity: (1 / offset) * 40 }}
 					>
 						<h1 className="home__hero-title">Feel</h1>
 						<h2 className="home__hero-subtitle">Thai Massage & Yoga</h2>

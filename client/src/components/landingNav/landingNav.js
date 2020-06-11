@@ -14,7 +14,7 @@ const LandingNav = () => {
 		window.addEventListener('scroll', parallaxShift);
 		if (offset > 550) {
 			setScrolled(true);
-		} else if (offset < 550) {
+		} else if (offset < 15) {
 			setScrolled(false);
 		}
 	}, [offset]);
