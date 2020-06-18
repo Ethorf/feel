@@ -11,8 +11,14 @@ export const Yoga = () => {
 				<div className={`default-page__header-description-container`}>
 					<h1 className={`default-page__header`}>Yoga</h1>
 					<p className={`default-page__description`}>
-						Yoga is about picturing an elastic band, and then letting it wrap you up super tight, like a
-						tube of toothpaste.{' '}
+						I offer yoga classes at Fridhem in Stjarnsund and am available for private in-home classes for
+						single or group sessions. This is an opportunity to have the full attention of one teacher and
+						entire class, to get some basic structure and technique or receive help with specific
+						postures/challenges. And I especially love to teach a private basic pre-natal yoga class.
+					</p>
+					<p className={`default-page__description`}>
+						I also organize retreats which can be found here -on my Facebook page :{' '}
+						<a href="https://www.facebook.com/Feelbodywork/">Feel Body Work</a>{' '}
 					</p>
 				</div>
 

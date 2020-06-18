@@ -31,6 +31,17 @@ const Nav = () => {
 				</div>
 				<Link
 					activeClass="active"
+					className="nav__about nav__link"
+					to="about"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					duration={800}
+				>
+					About
+				</Link>
+				<Link
+					activeClass="active"
 					className="nav__massage nav__link"
 					to="massage"
 					spy={true}
@@ -50,17 +61,6 @@ const Nav = () => {
 					duration={800}
 				>
 					Yoga
-				</Link>
-				<Link
-					activeClass="active"
-					className="nav__about nav__link"
-					to="about"
-					spy={true}
-					smooth={true}
-					offset={-70}
-					duration={800}
-				>
-					About
 				</Link>
 				<Link
 					to="contact"

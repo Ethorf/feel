@@ -23,6 +23,17 @@ const LandingNav = () => {
 			<div className="landing-nav__container">
 				<Link
 					activeClass="active"
+					className="landing-nav__about landing-nav__link"
+					to="about"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					duration={800}
+				>
+					About
+				</Link>
+				<Link
+					activeClass="active"
 					className="landing-nav__massage landing-nav__link"
 					to="massage"
 					spy={true}
@@ -43,17 +54,7 @@ const LandingNav = () => {
 				>
 					Yoga
 				</Link>
-				<Link
-					activeClass="active"
-					className="landing-nav__about landing-nav__link"
-					to="about"
-					spy={true}
-					smooth={true}
-					offset={-70}
-					duration={800}
-				>
-					About
-				</Link>
+
 				<Link
 					strict
 					exact

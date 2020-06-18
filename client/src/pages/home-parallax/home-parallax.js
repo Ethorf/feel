@@ -56,12 +56,11 @@ export const HomeParallax = () => {
 					>
 				</h2>
 			</section>
+			<About dark={true} id="about" />
 			<Massage dark={true} id="massage" />
 			<Yoga dark={true} id="yoga" />
-			<About dark={true} id="about" />
 			<Contact dark={true} id="contact" />
 			<Blog dark={true} id="blog" />
-
 			{/* <img src={hero} className="home__hero-img"></img>  */}
 		</div>
 	);
