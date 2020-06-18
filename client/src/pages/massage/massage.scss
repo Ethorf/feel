@@ -1,4 +1,12 @@
+@import '../../misc/globalStyles.scss';
+
 .massage {
 	// display: flex;
 	// transition: all 1s;
+	&__hands-img {
+		width: 45%;
+		border-radius: 5px;
+		margin-top: 50px;
+		@include box-shadow-1();
+	}
 }

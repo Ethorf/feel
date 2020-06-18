@@ -28,7 +28,6 @@ export const HomeParallax = () => {
 			<section className="home">
 				<LandingNav />
 				<header className="home__hero-container">
-					{/* <div className="home__hero-overlay-container" style={{ top: offset / 10 }}> */}
 					<div className="home__hero-overlay-container">
 						<img src={hero} className="home__hero-img"></img>
 						<div className="home__hero-overlay"></div>
@@ -36,7 +35,7 @@ export const HomeParallax = () => {
 					</div>
 					<div
 						className="home__hero-text-container"
-						style={{ bottom: 240 + offset / 2, opacity: (1 / offset) * 40 }}
+						style={{ top: 180 - offset * 2, opacity: (1 / offset) * 40 }}
 					>
 						<h1 className="home__hero-title">Feel</h1>
 						<h2 className="home__hero-subtitle">Thai Massage & Yoga</h2>
@@ -51,10 +50,10 @@ export const HomeParallax = () => {
 							Book Now
 						</Link>
 					</div>
+					<h2 className="home__down-arrow" style={{ opacity: (0.5 / offset) * 40 }}>
+						>
+					</h2>
 				</header>
-				<h2 className="home__down-arrow" style={{ opacity: (0.5 / offset) * 40 }}>
-					>
-				</h2>
 			</section>
 			<About dark={true} id="about" />
 			<Massage dark={true} id="massage" />

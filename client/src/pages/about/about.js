@@ -8,21 +8,18 @@ export const About = () => {
 	const [bioOpen, setBioOpen] = useState(false);
 	return (
 		<div className={`view`}>
-			<div className="about content default-page">
-				<div className={`default-page__left-container`}>
-					<div className={`default-page__header-description-container`}>
-						<h1 className={`default-page__header`}>About Me</h1>
-						<p className={`default-page__description`}>
-							{' '}
-							I am in a constant process of working with my body and struggle with many challenges
-							(especially an eating disorder) which help me to be understanding with others. I’m raising
-							two young girls and through many failures learning how to garden. I completed my yoga
-							teacher training with Frog Lotus Yoga International in Spain, and studied Thai Massage with
-							Thai Massage Toronto. I’ve also sat several Goenka Vipassana courses and have
-							maintained,lost, and regained my meditation practice many times over the last 10 years.
-							There is much to learn and even more to practice. Thank you.
-						</p>
-						<div className={`about__bio-container`}>
+			<div className="content about">
+				<h1 className={`about__header`}>About Me</h1>
+				<p className={`about__description`}>
+					{' '}
+					I am in a constant process of working with my body and struggle with many challenges (especially an
+					eating disorder) which help me to be understanding with others. I’m raising two young girls and
+					through many failures learning how to garden. I completed my yoga teacher training with Frog Lotus
+					Yoga International in Spain, and studied Thai Massage with Thai Massage Toronto. I’ve also sat
+					several Goenka Vipassana courses and have maintained,lost, and regained my meditation practice many
+					times over the last 10 years. There is much to learn and even more to practice. Thank you.
+				</p>
+				{/*<div className={`about__bio-container`}>
 							<h3 className="about__bio-header">
 								Bio{' '}
 								<span
@@ -56,14 +53,9 @@ export const About = () => {
 								not was that I couldn’t breathe. I had brought myself down a path to the point of not
 								being able to breathe or it being so painful to breath it created panic.
 							</p>
-						</div>
-					</div>
-					<div className={`about__contact-container`}>
-						<div className={`about__contact-map-address-container`}></div>
-					</div>
-				</div>
-				<img className={`default-page__img`} src={hallwayImg} alt="hallway image"></img>
+								</div> */}
 			</div>
+			{/*	<img className={`default-page__img`} src={hallwayImg} alt="hallway image"></img> */}
 		</div>
 	);
 };

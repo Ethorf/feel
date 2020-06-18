@@ -9,7 +9,6 @@ import loginIcon from '../../assets/icons/login-icon.png';
 
 export const Blog = () => {
 	const [blogPosts, setBlogPosts] = useState(null);
-
 	const getBlogPosts = async () => {
 		try {
 			const res = await axios.get('http://localhost:8083/blog/getAllPosts');
@@ -35,7 +34,7 @@ export const Blog = () => {
 								<h2 className={`blog-post__title`}>{item.title}</h2>
 								<h3 className={`blog-post__date`}>{item.date}</h3>
 							</div>
-							<p>{item.content}</p>
+							<p className={`blog-post__content`}>{item.content}</p>
 						</div>
 					))
 				)}
@@ -45,14 +44,12 @@ export const Blog = () => {
 
 	return (
 		<div className="view">
-			<div className="blog content default-page">
-				<div className="default-page__header-description-container">
-					<h1 className="default-page__header">Blog</h1>
-					{blogPosts ? <BlogPostsList /> : <h2>Loading Posts...</h2>}
-					<Link exact to="/adminLogin" className={`blog__admin-login-button`}>
-						Admin Login <img src={loginIcon} alt="login icon" className={`blog__login-icon`} />
-					</Link>
-				</div>
+			<div className="blog content">
+				<h1 className="default-page__header">Blog</h1>
+				{blogPosts ? <BlogPostsList /> : <h2>Loading Posts...</h2>}
+				<Link exact to="/adminLogin" className={`blog__admin-login-button`}>
+					Admin Login <img src={loginIcon} alt="login icon" className={`blog__login-icon`} />
+				</Link>
 			</div>
 		</div>
 	);

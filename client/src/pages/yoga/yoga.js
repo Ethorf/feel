@@ -8,7 +8,7 @@ export const Yoga = () => {
 	return (
 		<div className="view">
 			<div className="yoga content default-page">
-				<div className={`default-page__header-description-container`}>
+				<div className={`default-page__left-container`}>
 					<h1 className={`default-page__header`}>Yoga</h1>
 					<p className={`default-page__description`}>
 						I offer yoga classes at Fridhem in Stjarnsund and am available for private in-home classes for
@@ -21,8 +21,9 @@ export const Yoga = () => {
 						<a href="https://www.facebook.com/Feelbodywork/">Feel Body Work</a>{' '}
 					</p>
 				</div>
-
-				<img className={`default-page__img`} src={yogaImg1} alt="yoga image"></img>
+				<div className={`default-page__right-container`}>
+					<img className={`default-page__img`} src={yogaImg1} alt="yoga image"></img>
+				</div>
 			</div>
 		</div>
 	);

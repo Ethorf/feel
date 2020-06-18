@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import { NavLink, Link } from 'react-router-dom';
 import { Link, animateScroll as scroll } from 'react-scroll';
-
 import './nav.scss';
 
 const Nav = () => {
@@ -35,7 +33,7 @@ const Nav = () => {
 					to="about"
 					spy={true}
 					smooth={true}
-					offset={-70}
+					offset={-170}
 					duration={800}
 				>
 					About
@@ -46,7 +44,7 @@ const Nav = () => {
 					to="massage"
 					spy={true}
 					smooth={true}
-					offset={-70}
+					offset={-170}
 					duration={800}
 				>
 					Massage
@@ -57,7 +55,7 @@ const Nav = () => {
 					activeClass="active"
 					spy={true}
 					smooth={true}
-					offset={-70}
+					offset={-170}
 					duration={800}
 				>
 					Yoga
@@ -76,7 +74,7 @@ const Nav = () => {
 				<Link
 					spy={true}
 					smooth={true}
-					offset={-70}
+					offset={-170}
 					duration={800}
 					to="blog"
 					className="nav__blog nav__link"
@@ -86,7 +84,15 @@ const Nav = () => {
 				</Link>
 			</div>
 			<div className="nav__container nav__book-container">
-				<Link spy={true} smooth={true} offset={-70} duration={800} to="contact" className="nav__book-now">
+				<Link
+					activeClass="button-active"
+					spy={true}
+					smooth={true}
+					offset={-170}
+					duration={800}
+					to="contact"
+					className="nav__book-now"
+				>
 					Book Now
 				</Link>
 			</div>

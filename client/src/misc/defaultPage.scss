@@ -1,25 +1,27 @@
 @import './globalStyles.scss';
 .view {
-	padding-bottom: 400px;
+	padding-bottom: 100px;
 }
 .default-page {
 	display: flex;
 	align-items: flex-start;
-	height: 100%;
-	padding-left: 5vw;
+	height: 800px;
+	width: 100%;
 	padding-top: 50px;
 	padding-bottom: 5%;
-	margin-bottom: 10%;
+	padding-left: 10vw;
+	margin: 0;
 	position: relative;
 	border-radius: 3px;
 	z-index: 5;
 	background-color: white;
+	font-family: 'Manrope', sans-serif;
 
 	&__header {
 		position: relative;
 		color: $main-blue;
 		font-weight: 400;
-		font-size: 2.2rem;
+		font-size: 2.7rem;
 		@include underline-gradient-blue-1();
 		@include text-shadow-1();
 	}
@@ -32,24 +34,37 @@
 		@include text-shadow-1();
 	}
 	&__header-description-container {
+	}
+	&__left-container {
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 	}
-	&__left-container {
-		width: 50%;
+	&__left-sub-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 10%;
 	}
 	&__img {
-		height: 50%;
-		border: 1px solid lightblue;
+		width: 45%;
+		border-radius: 5px;
+		margin-top: 50px;
 		@include box-shadow-1();
-		border-radius: 3px;
 	}
 	&__description {
 		text-align: left;
 		padding-right: 13%;
 		padding-left: 30px;
-		line-height: 1.4em;
+		line-height: 1.7em;
+		font-size: 1.2em;
+	}
+	&__sub-description {
+		text-align: left;
+		padding-right: 13%;
+		line-height: 1.7em;
+		font-size: 0.9em;
 	}
 	&__overlay {
 		position: absolute;
@@ -67,6 +82,14 @@
 			#00d2ff
 		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		transform: rotate(90deg);
+	}
+	&__price {
+		margin: 5px 5px;
+		font-weight: 600;
+		font-size: 1.2em;
+	}
+	&__time {
+		font-weight: 400;
 	}
 }
 .view {
