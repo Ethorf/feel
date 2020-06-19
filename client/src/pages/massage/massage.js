@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../../misc/defaultPage.scss';
 import Hands from '../../assets/images/hands.jpeg';
+import Hallway from '../../assets/images/hallway-1.jpeg';
 
 import './massage.scss';
 export const Massage = () => {
@@ -17,8 +18,12 @@ export const Massage = () => {
 						that Thai Massage can actually increase energy and mental stimulation, decrease stress and
 						improve the bodys range of motion. Wear loose comfortable clothing.
 					</p>
-					<div className="default-page__left-sub-container">
-						<h2 className="massage__title default-page__header">Pricing</h2>
+					<img className="default-page__img" src={Hallway} alt="Hallway Picture"></img>
+				</div>
+				<div className={`default-page__right-container`}>
+					<img className="default-page__img" src={Hands} alt="Hands Picture"></img>
+					<div className="default-page__right-sub-container">
+						<h2 className="massage__title default-page__sub-header">Pricing</h2>
 						<p className="default-page__price">
 							<span className="default-page__time">75 mins -> </span>560kr{' '}
 						</p>
@@ -34,9 +39,6 @@ export const Massage = () => {
 							massage with light touch
 						</p>
 					</div>
-				</div>
-				<div className={`default-page__right-container`}>
-					<img className="default-page__img" src={Hands} alt="Hands Picture"></img>
 				</div>
 			</div>
 		</div>

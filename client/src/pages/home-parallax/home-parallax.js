@@ -60,7 +60,6 @@ export const HomeParallax = () => {
 			<Yoga dark={true} id="yoga" />
 			<Contact dark={true} id="contact" />
 			<Blog dark={true} id="blog" />
-			{/* <img src={hero} className="home__hero-img"></img>  */}
 		</div>
 	);
 };
