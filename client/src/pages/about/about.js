@@ -12,7 +12,7 @@ export const About = () => {
 				<h1 className={`about__header`} data-aos="fade-in">
 					About Me
 				</h1>
-				<p className={`about__description`} data-aos="fade-in">
+				<p className={`about__description`} data-aos="fade-in " data-aos-duration="1000">
 					{' '}
 					I am in a constant process of working with my body and struggle with many challenges (especially an
 					eating disorder) which help me to be understanding with others. I’m raising two young girls and

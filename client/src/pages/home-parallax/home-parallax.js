@@ -21,7 +21,7 @@ export const HomeParallax = () => {
 		window.addEventListener('scroll', parallaxShift);
 		AOS.init({
 			// initialise with other settings
-			duration: 2000
+			duration: 1000
 		});
 	}, []);
 

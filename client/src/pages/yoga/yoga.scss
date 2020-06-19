@@ -1,0 +1,9 @@
+@import '../../misc/globalStyles.scss';
+
+.yoga {
+	&__facebook-link {
+		text-decoration: none;
+		color: $main-blue;
+		font-weight: 600;
+	}
+}
