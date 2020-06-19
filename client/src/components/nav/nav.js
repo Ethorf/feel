@@ -5,7 +5,6 @@ import './nav.scss';
 const Nav = () => {
 	const [offset, setOffset] = useState(0);
 	const [scrolled, setScrolled] = useState(false);
-
 	const parallaxShift = () => {
 		setOffset(window.pageYOffset);
 	};
@@ -33,7 +32,7 @@ const Nav = () => {
 					to="about"
 					spy={true}
 					smooth={true}
-					offset={-170}
+					offset={10}
 					duration={800}
 				>
 					About
@@ -44,7 +43,7 @@ const Nav = () => {
 					to="massage"
 					spy={true}
 					smooth={true}
-					offset={-170}
+					offset={100}
 					duration={800}
 				>
 					Massage
@@ -55,7 +54,7 @@ const Nav = () => {
 					activeClass="active"
 					spy={true}
 					smooth={true}
-					offset={-170}
+					offset={100}
 					duration={800}
 				>
 					Yoga
@@ -66,7 +65,7 @@ const Nav = () => {
 					activeClass="active"
 					spy={true}
 					smooth={true}
-					offset={-70}
+					offset={100}
 					duration={800}
 				>
 					Contact
@@ -74,7 +73,7 @@ const Nav = () => {
 				<Link
 					spy={true}
 					smooth={true}
-					offset={-170}
+					offset={100}
 					duration={800}
 					to="blog"
 					className="nav__blog nav__link"
@@ -88,7 +87,7 @@ const Nav = () => {
 					activeClass="button-active"
 					spy={true}
 					smooth={true}
-					offset={-170}
+					offset={100}
 					duration={800}
 					to="contact"
 					className="nav__book-now"

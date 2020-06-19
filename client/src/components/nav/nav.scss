@@ -3,19 +3,28 @@
 .nav {
 	display: flex;
 	justify-content: space-between;
-	border: 3px solid whitesmoke;
+	// border: 3px solid whitesmoke;
 	text-decoration: none;
 	font-family: 'Manrope', sans-serif;
-	// font-family: 'Noto Sans SC', sans-serif;
 	padding: 5px 0;
 	margin: 0;
 	position: fixed;
-	// bottom: 0vh;
 	top: 0vh;
 	border-radius: 2px;
 	width: 100%;
 	z-index: 10;
-	background-color: rgb(255, 255, 255);
+	// background-color: rgb(255, 255, 255);
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 1) 15%,
+		rgba(255, 255, 255, 1) 85%,
+		rgba(245, 245, 245, 1) 90%,
+		rgba(233, 241, 248, 0.9) 92.5%,
+		rgba(208, 227, 245, 0.2) 95%,
+		rgba(255, 255, 255, 0) 100%
+	);
 
 	&__container {
 		display: flex;

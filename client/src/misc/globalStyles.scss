@@ -54,6 +54,39 @@ $main-blue: rgb(63, 123, 194);
 	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06),
 		0 14.3px 17.9px rgba(0, 0, 0, 0.072);
 }
+
+@mixin white-gradient-both() {
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(188, 240, 253, 0.011) 2.5%,
+		rgba(208, 227, 245, 0.2) 5%,
+		rgba(208, 227, 245, 0.4) 7.5%,
+		rgba(255, 255, 255, 1) 15%,
+		rgba(255, 255, 255, 0.9) 85%,
+		rgba(208, 227, 245, 0.4) 92.5%,
+		rgba(208, 227, 245, 0.2) 95%,
+		rgba(188, 240, 253, 0.011) 97.5%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
+@mixin white-gradient-top() {
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(188, 240, 253, 0.011) 2.5%,
+		rgba(208, 227, 245, 0.2) 5%,
+		rgba(208, 227, 245, 0.4) 7.5%,
+		rgba(255, 255, 255, 1) 15%,
+		rgba(255, 255, 255, 0.9) 85%,
+		rgba(208, 227, 245, 0.4) 92.5%,
+		rgba(208, 227, 245, 0.2) 95%,
+		rgba(188, 240, 253, 0.011) 97.5%,
+		rgba(255, 255, 255, 0) 100%
+	);
+}
 .invisible {
 	opacity: 0;
 	display: none;

@@ -6,45 +6,36 @@
 	flex-direction: column;
 	align-items: center;
 	padding-top: 50px;
-	padding-bottom: 200px;
+	padding-bottom: 280px;
 	position: relative;
 	border-radius: 5px;
 	z-index: 5;
-	background: rgb(255, 255, 255);
-	background: linear-gradient(
-		180deg,
-		rgba(255, 244, 255, 0) 0%,
-		rgba(255, 244, 255, 0.3) 7%,
-		rgba(255, 255, 255, 0.9) 15%,
-		rgba(255, 255, 255, 0.9) 90%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	// box-shadow: 0px -20px 5px rgba(255, 255, 255, 0.1);
+	@include white-gradient-both(); // box-shadow: 0px -20px 5px rgba(255, 255, 255, 0.1);
 	&__header {
 		color: $main-blue;
 		font-size: 3.5em;
-		margin-top: 240px;
-		margin-bottom: 80px;
+		margin-top: 140px;
+		margin-bottom: 30px;
 		position: relative;
-		&:after {
-			content: '';
-			position: absolute;
-			width: 250%;
-			height: 2px;
-			bottom: -30px;
-			right: -75%;
-			border-radius: 5px;
-			background: linear-gradient(
-				90deg,
-				rgba(255, 255, 255, 0.5) 0%,
-				rgba(89, 127, 165, 1) 15%,
-				rgba(89, 127, 165, 1) 85%,
-				rgba(255, 255, 255, 0.5) 100%
-			);
-			// background-color: grey;
-			opacity: 0.7;
-			transition: all 0.7s ease-in-out 0s;
-		}
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	width: 250%;
+		// 	height: 2px;
+		// 	bottom: -30px;
+		// 	right: -75%;
+		// 	border-radius: 5px;
+		// 	background: linear-gradient(
+		// 		90deg,
+		// 		rgba(255, 255, 255, 0.5) 0%,
+		// 		rgba(89, 127, 165, 1) 15%,
+		// 		rgba(89, 127, 165, 1) 85%,
+		// 		rgba(255, 255, 255, 0.5) 100%
+		// 	);
+		// 	// background-color: grey;
+		// 	opacity: 0.7;
+		// 	transition: all 0.7s ease-in-out 0s;
+		// }
 	}
 	&__description {
 		font-size: 1.1em;
@@ -55,10 +46,10 @@
 		&:after {
 			content: '';
 			position: absolute;
-			width: 75%;
+			width: 60%;
 			height: 2px;
-			bottom: -70px;
-			right: 10%;
+			bottom: -50px;
+			right: 20%;
 			border-radius: 5px;
 			background: linear-gradient(
 				90deg,

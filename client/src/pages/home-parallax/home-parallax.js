@@ -10,6 +10,7 @@ import Yoga from '../../pages/yoga/yoga.js';
 import Massage from '../../pages/massage/massage.js';
 import Contact from '../../pages/contact/contact.js';
 import Blog from '../../pages/blog/blog.js';
+import AOS from 'aos';
 
 export const HomeParallax = () => {
 	const [offset, setOffset] = useState(0);
@@ -18,10 +19,11 @@ export const HomeParallax = () => {
 	};
 	useEffect(() => {
 		window.addEventListener('scroll', parallaxShift);
+		AOS.init({
+			// initialise with other settings
+			duration: 2000
+		});
 	}, []);
-	// const scroll = (ref) => {
-	// 	ref.current.scrollIntoView({ behavior: 'smooth' });
-	// };
 
 	return (
 		<div className="view">
@@ -36,6 +38,8 @@ export const HomeParallax = () => {
 					<div
 						className="home__hero-text-container"
 						style={{ top: 180 - offset * 2, opacity: (1 / offset) * 40 }}
+						data-aos="fade-in"
+						data-aos-duration="2000"
 					>
 						<h1 className="home__hero-title">Feel</h1>
 						<h2 className="home__hero-subtitle">Thai Massage & Yoga</h2>
@@ -55,7 +59,7 @@ export const HomeParallax = () => {
 					</h2>
 				</header>
 			</section>
-			<About dark={true} id="about" />
+			<About dark={true} id="about" data-aos="zoom-in" />
 			<Massage dark={true} id="massage" />
 			<Yoga dark={true} id="yoga" />
 			<Contact dark={true} id="contact" />

@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import './about.scss';
 import '../../misc/defaultPage.scss';
-import hallwayImg from '../../assets/images/hallway-1.jpeg';
+import AOS from 'aos';
 
 export const About = () => {
 	const [bioOpen, setBioOpen] = useState(false);
 	return (
 		<div className={`view`}>
 			<div className="content about">
-				<h1 className={`about__header`}>About Me</h1>
-				<p className={`about__description`}>
+				<h1 className={`about__header`} data-aos="fade-in">
+					About Me
+				</h1>
+				<p className={`about__description`} data-aos="fade-in">
 					{' '}
 					I am in a constant process of working with my body and struggle with many challenges (especially an
 					eating disorder) which help me to be understanding with others. I’m raising two young girls and
