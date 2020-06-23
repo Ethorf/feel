@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import './App.css';
 import Nav from './components/nav/nav.js';
-// import Home from './pages/home/home.js';
 import HomeParallax from './pages/home-parallax/home-parallax.js';
 
 import Massage from './pages/massage/massage.js';

@@ -5,40 +5,35 @@
 	transition: all 1s;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 50px;
-	padding-bottom: 280px;
+	padding-top: 10px;
+	padding-bottom: 80px;
 	position: relative;
-	border-radius: 5px;
+	// border-radius: 5px;
 	z-index: 5;
-	@include white-gradient-both(); // box-shadow: 0px -20px 5px rgba(255, 255, 255, 0.1);
+	background-color: white;
+	&__gradient {
+		position: relative;
+		height: 300px;
+		@include scrimGradient();
+		opacity: 1;
+	}
+	&__gradient-bottom {
+		position: relative;
+		height: 200px;
+		@include scrimGradient();
+		transform: rotate(180deg);
+		opacity: 0.99;
+		// margin-bottom: 100px;
+	}
 	&__header {
 		color: $main-blue;
 		font-size: 3.5em;
-		margin-top: 140px;
+		margin-top: 80px;
 		margin-bottom: 30px;
 		position: relative;
-		// &:after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	width: 250%;
-		// 	height: 2px;
-		// 	bottom: -30px;
-		// 	right: -75%;
-		// 	border-radius: 5px;
-		// 	background: linear-gradient(
-		// 		90deg,
-		// 		rgba(255, 255, 255, 0.5) 0%,
-		// 		rgba(89, 127, 165, 1) 15%,
-		// 		rgba(89, 127, 165, 1) 85%,
-		// 		rgba(255, 255, 255, 0.5) 100%
-		// 	);
-		// 	// background-color: grey;
-		// 	opacity: 0.7;
-		// 	transition: all 0.7s ease-in-out 0s;
-		// }
 	}
 	&__description {
-		font-size: 1.1em;
+		font-size: 1.3em;
 		width: 57%;
 		text-align: center;
 		line-height: 1.7;

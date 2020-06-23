@@ -20,7 +20,6 @@ export const HomeParallax = () => {
 	useEffect(() => {
 		window.addEventListener('scroll', parallaxShift);
 		AOS.init({
-			// initialise with other settings
 			duration: 1000
 		});
 	}, []);

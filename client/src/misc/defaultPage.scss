@@ -36,7 +36,6 @@
 		font-size: 2.7rem;
 		margin-top: 80px;
 		@include underline-gradient-blue-1();
-		@include text-shadow-1();
 	}
 	&__sub-header {
 		position: relative;
@@ -44,7 +43,6 @@
 		font-weight: 400;
 		font-size: 2.1rem;
 		@include underline-gradient-blue-1();
-		@include text-shadow-1();
 	}
 	&__header-description-container {
 	}
@@ -76,7 +74,7 @@
 		width: 80%;
 		border-radius: 3px;
 		margin-top: 150px;
-		@include box-shadow-1();
+		// @include box-shadow-1();
 	}
 	&__description {
 		text-align: left;
@@ -87,7 +85,6 @@
 	}
 	&__sub-description {
 		text-align: right;
-
 		line-height: 1.7em;
 		font-size: 0.9em;
 		margin: 0;
