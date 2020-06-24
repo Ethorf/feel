@@ -21,7 +21,7 @@ const Nav = () => {
 	};
 	console.log(offset);
 	return (
-		<nav className={` ${window.innerWidth > 767 ? (scrolled ? 'visible' : 'invisible') : null} nav`}>
+		<nav className={` ${window.innerWidth >= 768 ? (scrolled ? 'visible' : 'invisible') : null} nav`}>
 			<div className="nav__container">
 				<div onClick={scrollToTop} className="nav__title">
 					Feel
@@ -32,7 +32,7 @@ const Nav = () => {
 					to="about"
 					spy={true}
 					smooth={true}
-					offset={10}
+					offset={-120}
 					duration={800}
 				>
 					About
@@ -43,7 +43,7 @@ const Nav = () => {
 					to="massage"
 					spy={true}
 					smooth={true}
-					offset={100}
+					offset={-100}
 					duration={800}
 				>
 					Massage
@@ -54,7 +54,7 @@ const Nav = () => {
 					activeClass="active"
 					spy={true}
 					smooth={true}
-					offset={100}
+					offset={-100}
 					duration={800}
 				>
 					Yoga
@@ -65,7 +65,7 @@ const Nav = () => {
 					activeClass="active"
 					spy={true}
 					smooth={true}
-					offset={100}
+					offset={-100}
 					duration={800}
 				>
 					Contact
@@ -73,7 +73,7 @@ const Nav = () => {
 				<Link
 					spy={true}
 					smooth={true}
-					offset={100}
+					offset={-100}
 					duration={800}
 					to="blog"
 					className="nav__blog nav__link"

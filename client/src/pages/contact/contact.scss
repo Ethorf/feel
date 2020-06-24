@@ -42,4 +42,19 @@
 		border: 1px solid rgba(114, 161, 250, 0.399);
 		@include box-shadow-1();
 	}
+	@include mobile-small-only() {
+		font-size: 1em;
+		&__contact-info-container {
+			padding-left: 0;
+		}
+		&__map-embed {
+			width: 87%;
+			border-radius: 5px;
+			margin-top: 10px;
+			border: none;
+		}
+		&__img {
+			display: none;
+		}
+	}
 }

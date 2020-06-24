@@ -134,5 +134,14 @@
 			opacity: 0.9;
 			font-weight: 300;
 		}
+		&__book-now {
+			width: 55%;
+		}
+		&__hero-img {
+			position: relative;
+			z-index: 2;
+			height: 100%;
+			width: 400%;
+		}
 	}
 }

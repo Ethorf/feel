@@ -57,4 +57,17 @@
 			transition: all 0.7s ease-in-out 0s;
 		}
 	}
+	@include mobile-small-only() {
+		align-items: center;
+
+		&__gradient {
+			height: 120px;
+		}
+		&__header {
+			font-size: 3em;
+		}
+		&__description {
+			width: 80%;
+		}
+	}
 }

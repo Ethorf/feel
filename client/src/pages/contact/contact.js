@@ -25,7 +25,7 @@ export const Contact = () => {
 					</div>
 				</div>
 				<div className={`default-page__right-container`}>
-					<img className={`default-page__img`} src={SnowTrees} alt="yoga image"></img>
+					<img className={`default-page__img contact__img`} src={SnowTrees} alt="yoga image"></img>
 				</div>
 			</div>
 			<div className="default-page__bottom-pseudo-chunk"></div>
@@ -33,8 +33,4 @@ export const Contact = () => {
 	);
 };
 
-const mapStateToProps = (state) => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Contact);
+export default Contact;

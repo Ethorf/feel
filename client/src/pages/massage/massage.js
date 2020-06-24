@@ -48,7 +48,10 @@ export const Massage = () => {
 						<p className="default-page__price" data-aos="fade-in">
 							<span className="default-page__time"> 120mins -> </span>800kr{' '}
 						</p>
-						<p className="default-page__sub-description" data-aos="fade-in">
+						<p
+							className="default-page__sub-description default-page__sub-description-paragraph-1"
+							data-aos="fade-in"
+						>
 							Please contact me for special requests-
 						</p>
 						<p className="default-page__sub-description" data-aos="fade-in">

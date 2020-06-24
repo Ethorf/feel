@@ -1,12 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import './home-parallax.scss';
 import hero from '../../assets/images/lake-3.jpeg';
 import LandingNav from '../../components/landingNav/landingNav';
 import MobileNav from '../../components/mobileNav/mobileNav';
-
 import About from '../../pages/about/about.js';
 import Yoga from '../../pages/yoga/yoga.js';
 import Massage from '../../pages/massage/massage.js';
@@ -39,8 +37,8 @@ export const HomeParallax = () => {
 					<div
 						className="home__hero-text-container"
 						style={
-							window.innerWidth < 767
-								? { top: 100 - offset * 1.2, opacity: (1 / offset) * 40 }
+							window.innerWidth < 768
+								? { top: 120 - offset * 0.9, opacity: (1 / offset) * 40 }
 								: { top: 180 - offset * 1.2, opacity: (1 / offset) * 40 }
 						}
 						data-aos="fade-in"

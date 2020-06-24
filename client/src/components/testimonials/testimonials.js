@@ -27,7 +27,12 @@ export default function Testimonials(props) {
 			name: 'Cheryl Reid '
 		},
 
-		{ content: 'Kan varmt rekommenderas!', name: 'Ulla Kleberg' }
+		{ content: 'Kan varmt rekommenderas!', name: 'Ulla Kleberg' },
+		{
+			content:
+				'Kelsey is a naturally born yogini and masseuse. Her presence and touch is unique and I can warmly recommend her.',
+			name: 'Eva Callmin'
+		}
 	];
 	const [activeTestimonial, setActiveTestimonial] = useState(testimonialData[counter]);
 	function next() {
@@ -95,6 +100,7 @@ export default function Testimonials(props) {
 					<h3 className={`testimonials__dot ${counter === 0 ? 'active-dot' : 'inactive-dot'}`}>.</h3>
 					<h3 className={`testimonials__dot ${counter === 1 ? 'active-dot' : 'inactive-dot'}`}>.</h3>
 					<h3 className={`testimonials__dot ${counter === 2 ? 'active-dot' : 'inactive-dot'}`}>.</h3>
+					<h3 className={`testimonials__dot ${counter === 3 ? 'active-dot' : 'inactive-dot'}`}>.</h3>
 				</div>
 			</div>
 			<div className="testimonials__gradient-bottom"></div>
