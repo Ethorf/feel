@@ -25,6 +25,34 @@ router.post('/addNewPost', authorize, async (req, res) => {
 
 // Get All Posts
 // @ Public
+router.delete('/deletePost/:id', authorize, async (req, res) => {
+	const id = req.params.id;
+
+	try {
+		const post = await pool.query('DELETE FROM blog_posts WHERE post_id = $1', [id]);
+		res.json(post);
+	} catch (err) {
+		console.error(err.message);
+		res.status(500).send('Server error');
+	}
+});
+
+router.post('/updatePost/:id', authorize, async (req, res) => {
+	const id = req.params.id;
+	const { title, content } = req.body;
+
+	try {
+		const post = await pool.query('UPDATE blog_posts SET title = $2, content = $3 WHERE post_id = $1', [
+			id,
+			title,
+			content
+		]);
+		res.json(post);
+	} catch (err) {
+		console.error(err.message);
+		res.status(500).send('Server error');
+	}
+});
 
 router.get('/getAllPosts', async (req, res) => {
 	try {

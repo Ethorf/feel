@@ -42,6 +42,9 @@
 	&__book-now {
 		@include book-now-button();
 	}
+	@include mobile-small-only() {
+		display: none;
+	}
 }
 .active {
 	color: rgba(63, 127, 191, 0.9);

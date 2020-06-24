@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
 import './addBlogPost.scss';
+import '../blog/blog.scss';
 import axios from 'axios';
+import EditBlogPostModal from '../../components/editBlogPostModal/editBlogPostModal.js';
 
-export default function AddBlogPost({ setAuth }) {
+export default function AddBlogPost({ setAuth, blogPosts, getBlogPosts }) {
 	const [inputs, setInputs] = useState({
 		title: '',
 		content: ''
 	});
 	const { title, content } = inputs;
-
 	const logout = () => {
 		localStorage.removeItem('token');
 		setAuth(false);
 	};
-
 	const onChange = (e) => setInputs({ ...inputs, [e.target.name]: e.target.value });
 
 	const addPost = async (e) => {
-		// e.preventDefault();
-
+		e.preventDefault();
 		try {
 			const body = { title, content };
 			const response = await fetch('http://localhost:8083/blog/addNewPost', {
@@ -29,9 +28,31 @@ export default function AddBlogPost({ setAuth }) {
 				},
 				body: JSON.stringify(body)
 			});
+			getBlogPosts();
 		} catch (err) {
 			console.log('Error Adding Post');
 		}
+	};
+
+	const AdminBlogPostsList = () => {
+		return (
+			<>
+				{blogPosts.length === 0 ? (
+					<h2>No Blog Posts Created Yet</h2>
+				) : (
+					blogPosts.map((post) => (
+						<div className={`blog-post`}>
+							<div className={`blog-post__title-date`}>
+								<h2 className={`blog-post__title`}>{post.title}</h2>
+								<h3 className={`blog-post__date`}>{post.date}</h3>
+							</div>
+							<p className={`blog-post__content`}>{post.content}</p>
+							<EditBlogPostModal post={post} getBlogPosts={getBlogPosts} />
+						</div>
+					))
+				)}
+			</>
+		);
 	};
 
 	return (
@@ -57,7 +78,8 @@ export default function AddBlogPost({ setAuth }) {
 
 				<button className={`add-blog-post__add-post-button`}>Add Post</button>
 			</form>
-
+			<h2>Update // Delete Posts</h2>
+			<AdminBlogPostsList />
 			<button className={`add-blog-post__logout-button`} onClick={logout}>
 				Logout
 			</button>

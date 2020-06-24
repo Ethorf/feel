@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import './landingNav.scss';
+import './mobileNav.scss';
 
-const LandingNav = () => {
+const MobileNav = () => {
 	const [offset, setOffset] = useState(0);
 	const [scrolled, setScrolled] = useState(false);
+	const [navOpen, setNavOpen] = useState(false);
 
 	const parallaxShift = () => {
 		setOffset(window.pageYOffset);
@@ -19,11 +19,14 @@ const LandingNav = () => {
 		}
 	}, [offset]);
 	return (
-		<nav className={` ${window.innerWidth > 767 ? (scrolled ? 'invisible' : 'visible') : null} landing-nav`}>
-			<div className="landing-nav__container">
+		<nav className={`mobile-nav`}>
+			<h2 onClick={() => setNavOpen(!navOpen)} className="mobile-nav__hamburger">
+				{navOpen ? 'X' : '|||'}
+			</h2>
+			<div className={`mobile-nav__container ${navOpen ? 'visible' : 'invisible'}`}>
 				<Link
 					activeClass="active"
-					className="landing-nav__about landing-nav__link"
+					className="mobile-nav__about mobile-nav__link"
 					to="about"
 					spy={true}
 					smooth={true}
@@ -34,7 +37,7 @@ const LandingNav = () => {
 				</Link>
 				<Link
 					activeClass="active"
-					className="landing-nav__massage landing-nav__link"
+					className="mobile-nav__massage mobile-nav__link"
 					to="massage"
 					spy={true}
 					smooth={true}
@@ -45,7 +48,7 @@ const LandingNav = () => {
 				</Link>
 				<Link
 					to="yoga"
-					className="landing-nav__yoga landing-nav__link"
+					className="mobile-nav__yoga mobile-nav__link"
 					activeClass="active"
 					spy={true}
 					smooth={true}
@@ -59,7 +62,7 @@ const LandingNav = () => {
 					strict
 					exact
 					to="contact"
-					className="landing-nav__contact landing-nav__link"
+					className="mobile-nav__contact mobile-nav__link"
 					activeClass="active"
 					spy={true}
 					smooth={true}
@@ -74,7 +77,7 @@ const LandingNav = () => {
 					offset={-70}
 					duration={800}
 					to="blog"
-					className="landing-nav__blog landing-nav__link"
+					className="mobile-nav__blog mobile-nav__link"
 					activeClass="active"
 				>
 					Blog
@@ -84,4 +87,4 @@ const LandingNav = () => {
 	);
 };
 
-export default LandingNav;
+export default MobileNav;

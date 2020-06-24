@@ -13,13 +13,13 @@
 	background-color: white;
 	&__gradient {
 		position: relative;
-		height: 300px;
+		height: 220px;
 		@include scrimGradient();
 		opacity: 1;
 	}
 	&__gradient-bottom {
 		position: relative;
-		height: 200px;
+		height: 100px;
 		@include scrimGradient();
 		transform: rotate(180deg);
 		opacity: 0.99;
@@ -28,7 +28,7 @@
 	&__header {
 		color: $main-blue;
 		font-size: 3.5em;
-		margin-top: 80px;
+		// margin-top: 80px;
 		margin-bottom: 30px;
 		position: relative;
 	}

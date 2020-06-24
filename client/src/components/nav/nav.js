@@ -21,7 +21,7 @@ const Nav = () => {
 	};
 	console.log(offset);
 	return (
-		<nav className={`nav ${scrolled ? 'visible' : 'invisible'}`}>
+		<nav className={` ${window.innerWidth > 767 ? (scrolled ? 'visible' : 'invisible') : null} nav`}>
 			<div className="nav__container">
 				<div onClick={scrollToTop} className="nav__title">
 					Feel

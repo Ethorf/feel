@@ -1,0 +1,42 @@
+@import '../../misc/globalStyles.scss';
+
+.mobile-nav {
+	display: none;
+
+	@include mobile-small-only() {
+		display: flex;
+		position: absolute;
+		width: 100%;
+		background-color: white;
+		z-index: 12;
+
+		&__hamburger {
+			position: fixed;
+			z-index: 14;
+
+			color: silver;
+			transform: rotate(90deg);
+			font-size: 2em;
+			top: 10px;
+			left: 4%;
+			margin: 0;
+		}
+		&__container {
+			position: fixed;
+			background-color: rgba(0, 0, 0, 0.7);
+			top: 0%;
+			height: 50vh;
+			z-index: 13;
+			width: 100%;
+			padding-top: 10px;
+			display: flex;
+			flex-direction: column;
+			border-radius: 5px;
+		}
+		&__link {
+			font-size: 1.5em;
+			margin: 5px 0;
+			color: white;
+		}
+	}
+}

@@ -9,7 +9,7 @@ export const Yoga = () => {
 		<div className="view">
 			<div className="yoga content default-page">
 				<div className={`default-page__left-container`}>
-					<h1 className={`default-page__header`} data-aos="slide-right">
+					<h1 className={`default-page__header`} data-aos="fade-in">
 						Yoga
 					</h1>
 					<p className={`default-page__description`} data-aos="fade-in">
@@ -29,6 +29,7 @@ export const Yoga = () => {
 					<img className={`default-page__img`} src={yogaImg1} alt="yoga image" data-aos="slide-up"></img>
 				</div>
 			</div>
+			<div className="default-page__bottom-pseudo-chunk"></div>
 		</div>
 	);
 };

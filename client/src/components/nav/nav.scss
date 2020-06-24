@@ -83,6 +83,9 @@
 	&__book-now {
 		@include book-now-button();
 	}
+	@include mobile-small-only() {
+		display: none;
+	}
 }
 .active {
 	&:before {

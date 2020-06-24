@@ -10,7 +10,7 @@ export const Massage = () => {
 		<div className="view">
 			<div className="massage content default-page">
 				<div className={`default-page__left-container`}>
-					<h1 className="massage__title default-page__header" data-aos="slide-right">
+					<h1 className="massage__title default-page__header" data-aos="fade-in">
 						Thai Massage
 					</h1>
 					<p className="default-page__description" data-aos="fade-in">
@@ -27,11 +27,11 @@ export const Massage = () => {
 						className="default-page__img"
 						src={Hands}
 						alt="Hands Picture"
-						data-aos="slide-left"
+						data-aos="fade-in"
 						data-aos-duration="8000"
 					></img>
 					<div className="default-page__right-sub-container">
-						<h2 className="massage__title default-page__sub-header" data-aos="slide-left">
+						<h2 className="massage__title default-page__sub-header" data-aos="fade-in">
 							Pricing
 						</h2>
 						<p className="default-page__price" data-aos="fade-in">
@@ -57,6 +57,7 @@ export const Massage = () => {
 					</div>
 				</div>
 			</div>
+			<div className="default-page__bottom-pseudo-chunk"></div>
 		</div>
 	);
 };

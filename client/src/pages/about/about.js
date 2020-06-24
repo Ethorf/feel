@@ -4,7 +4,7 @@ import './about.scss';
 import '../../misc/defaultPage.scss';
 import Testimonials from '../../components/testimonials/testimonials.js';
 
-export const About = () => {
+export const About = (props) => {
 	return (
 		<div className={`view`}>
 			<div className="about__gradient"></div>
@@ -12,7 +12,7 @@ export const About = () => {
 				<h1 className={`about__header`} data-aos="fade-in">
 					About Me
 				</h1>
-				<p className={`about__description`} data-aos="fade-in " data-aos-duration="1000">
+				<p className={`about__description`} data-aos="fade-in">
 					{' '}
 					I am in a constant process of working with my body and struggle with many challenges (especially an
 					eating disorder) which help me to be understanding with others. I’m raising two young girls and
@@ -23,7 +23,7 @@ export const About = () => {
 				</p>
 			</div>
 
-			<Testimonials />
+			<Testimonials offset={props.offset} />
 		</div>
 	);
 };

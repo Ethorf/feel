@@ -28,6 +28,7 @@ export const Contact = () => {
 					<img className={`default-page__img`} src={SnowTrees} alt="yoga image"></img>
 				</div>
 			</div>
+			<div className="default-page__bottom-pseudo-chunk"></div>
 		</div>
 	);
 };

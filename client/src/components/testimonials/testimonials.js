@@ -7,7 +7,8 @@ import Dock from './../../assets/images/lake-dock-reversed.jpeg';
 
 gsap.registerPlugin(CSSPlugin);
 
-export default function Testimonials() {
+export default function Testimonials(props) {
+	let offset = props.offset;
 	const testimonialTl = new TimelineMax({ paused: true });
 	const [testimonialAnimation, setTestimonialAnimation] = useState(null);
 	let testimonialContainer = useRef(null);
@@ -62,13 +63,17 @@ export default function Testimonials() {
 	console.log(testimonialData.indexOf(activeTestimonial));
 	return (
 		<div className="testimonials">
-			<div className="about__gradient"></div>
+			<div className="testimonials__gradient"></div>
+			<img
+				// style={{ top: 0 + offset - 1432 }}
 
-			<img className="testimonials__bg-img" src={Dock} alt="Dock Image"></img>
+				className="testimonials__bg-img"
+				src={Dock}
+				alt="Dock Image"
+			></img>
 			<div className="testimonials__bg-overlay"></div>
-
 			<div className="testimonials__content-container">
-				<h2 className="testimonials__title">What Friends Have To Say</h2>
+				{/* <h2 className="testimonials__title">What Friends Have To Say</h2> */}
 				<div className="testimonials__arrows-content-container">
 					<p data-aos="fade-in " className="testimonials__arrow" onClick={previous}>
 						{' '}
@@ -92,6 +97,7 @@ export default function Testimonials() {
 					<h3 className={`testimonials__dot ${counter === 2 ? 'active-dot' : 'inactive-dot'}`}>.</h3>
 				</div>
 			</div>
+			<div className="testimonials__gradient-bottom"></div>
 		</div>
 	);
 }
