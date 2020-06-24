@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import AddBlogPost from '../../pages/addBlogPost/addBlogPost.js';
 import './adminLogin.scss';
@@ -86,6 +87,7 @@ export default function AdminLogin({ setAuth, isAuthenticated }) {
 						</div>
 					</div>
 					<button className={`admin-login__button`}>Login</button>
+					<Link to="/">Home</Link>
 				</form>
 			</div>
 			{isAuthenticated ? (

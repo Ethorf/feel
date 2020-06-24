@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './addBlogPost.scss';
 import '../blog/blog.scss';
-import axios from 'axios';
 import EditBlogPostModal from '../../components/editBlogPostModal/editBlogPostModal.js';
 
 export default function AddBlogPost({ setAuth, blogPosts, getBlogPosts }) {
@@ -83,6 +83,7 @@ export default function AddBlogPost({ setAuth, blogPosts, getBlogPosts }) {
 			<button className={`add-blog-post__logout-button`} onClick={logout}>
 				Logout
 			</button>
+			<Link to="/">Home</Link>
 		</div>
 	);
 }
