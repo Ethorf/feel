@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './yoga.scss';
 import '../../misc/defaultPage.scss';
 import yogaImg1 from '../../assets/images/yoga-1.jpeg';
+import flower from '../../assets/images/flower-3.jpeg';
 
 export const Yoga = () => {
 	return (
@@ -18,15 +19,18 @@ export const Yoga = () => {
 						entire class, to get some basic structure and technique or receive help with specific
 						postures/challenges. And I especially love to teach a private basic pre-natal yoga class.
 					</p>
+
+					<img className="default-page__left-img" alt="flower" src={flower}></img>
+				</div>
+				<div className={`default-page__right-container`}>
+					<img className={`default-page__img`} src={yogaImg1} alt="yoga image" data-aos="slide-up"></img>
 					<p className={`default-page__description`}>
 						I also organize retreats which can be found on my Facebook page :{' '}
 						<a className="yoga__facebook-link" href="https://www.facebook.com/Feelbodywork/">
 							Feel Body Work
 						</a>{' '}
 					</p>
-				</div>
-				<div className={`default-page__right-container`}>
-					<img className={`default-page__img`} src={yogaImg1} alt="yoga image" data-aos="slide-up"></img>
+					<p className={`default-page__description`}>Please Contact me for Pricing!</p>
 				</div>
 			</div>
 			<div className="default-page__bottom-pseudo-chunk"></div>

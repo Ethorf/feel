@@ -75,7 +75,6 @@ export default function AddBlogPost({ setAuth, blogPosts, getBlogPosts }) {
 					value={content}
 					onChange={(e) => onChange(e)}
 				></textarea>
-
 				<button className={`add-blog-post__add-post-button`}>Add Post</button>
 			</form>
 			<h2>Update // Delete Posts</h2>

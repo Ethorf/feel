@@ -39,7 +39,7 @@ export const HomeParallax = () => {
 						style={
 							window.innerWidth < 768
 								? { top: 120 - offset * 0.9, opacity: (1 / offset) * 40 }
-								: { top: 180 - offset * 1.2, opacity: (1 / offset) * 40 }
+								: { top: 220 - offset * 1.2, opacity: (1 / offset) * 40 }
 						}
 						data-aos="fade-in"
 						data-aos-duration="2000"
@@ -54,7 +54,7 @@ export const HomeParallax = () => {
 							to="contact"
 							className="home__book-now"
 						>
-							Book Now
+							Get In Touch
 						</Link>
 					</div>
 					<h2 className="home__down-arrow" style={{ opacity: (0.5 / offset) * 40 }}>

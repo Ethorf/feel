@@ -20,7 +20,7 @@ export const Massage = () => {
 						that Thai Massage can actually increase energy and mental stimulation, decrease stress and
 						improve the bodys range of motion. Wear loose comfortable clothing.
 					</p>
-					<img className="massage__left-img" data-aos="fade-in" src={Moon} alt="Hallway Picture"></img>
+					<img className="default-page__left-img" data-aos="fade-in" src={Moon} alt="Hallway Picture"></img>
 				</div>
 				<div className={`default-page__right-container`}>
 					<img

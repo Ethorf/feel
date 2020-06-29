@@ -69,13 +69,14 @@
 		// border: 1px solid black;
 	}
 	&__date {
-		font-size: 0.9em;
 		font-weight: 400;
 	}
 	&__content {
 		margin-bottom: 50px;
+		font-size: 1.2em;
 		text-align: left;
 		width: 100%;
+		line-height: 1.5;
 	}
 	@include mobile-small-only() {
 		width: 75%;
@@ -89,7 +90,6 @@
 			margin-left: 10px;
 		}
 		&__content {
-			line-height: 1.5;
 			font-size: 1.3em;
 		}
 	}

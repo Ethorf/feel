@@ -38,9 +38,10 @@
 	}
 	&__map-embed {
 		height: 300px;
-		border-radius: 5px;
+		border-radius: 3px;
 		border: 1px solid rgba(114, 161, 250, 0.399);
-		@include box-shadow-1();
+		border: none;
+		// @include box-shadow-1();
 	}
 	@include mobile-small-only() {
 		font-size: 1em;

@@ -5,7 +5,7 @@
 	transition: all 1s;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 10px;
+	padding-top: 50px;
 	padding-bottom: 80px;
 	position: relative;
 	// border-radius: 5px;
@@ -13,7 +13,7 @@
 	background-color: white;
 	&__gradient {
 		position: relative;
-		height: 220px;
+		height: 40px;
 		@include scrimGradient();
 		opacity: 1;
 	}
@@ -25,6 +25,24 @@
 		opacity: 0.99;
 		// margin-bottom: 100px;
 	}
+	&__headshot {
+		width: 30%;
+		// height: auto;
+		height: 10%;
+		border-radius: 4px;
+		margin-top: 60px;
+	}
+	&__headshot-header-description-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	&__header-description-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		width: 50%;
+	}
 	&__header {
 		color: $main-blue;
 		font-size: 3.5em;
@@ -34,17 +52,18 @@
 	}
 	&__description {
 		font-size: 1.3em;
-		width: 57%;
-		text-align: center;
+		width: 90%;
+		margin: 0;
+		text-align: right;
 		line-height: 1.7;
 		position: relative;
 		&:after {
 			content: '';
 			position: absolute;
-			width: 60%;
+			width: 120%;
 			height: 2px;
-			bottom: -50px;
-			right: 20%;
+			bottom: -70px;
+			right: 0%;
 			border-radius: 5px;
 			background: linear-gradient(
 				90deg,
@@ -56,6 +75,9 @@
 			opacity: 0.7;
 			transition: all 0.7s ease-in-out 0s;
 		}
+	}
+	&__thank-you {
+		font-size: 1.3em;
 	}
 	@include mobile-small-only() {
 		align-items: center;

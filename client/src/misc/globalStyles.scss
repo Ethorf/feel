@@ -1,4 +1,6 @@
 $main-blue: rgb(63, 123, 194);
+$main-purple: rgb(99, 54, 202);
+
 $black-text-color: #323232;
 $white-text-color: #ffffff;
 $divider-color: #e1e1e1;
@@ -19,6 +21,7 @@ $mobile-only: 'screen and (min-width:#{$mobile-small-max}) and (max-width: #{$mo
 $tablet-only: 'screen and (min-width:#{$tablet-min}) and (max-width: #{$tablet-max})';
 $laptop-small: 'screen and (min-width:#{$laptop-small-min}) and (max-width: #{$laptop-small-max})';
 $laptop-large: 'screen and (min-width: #{$laptop-large-min})';
+
 //Media Queries
 
 //0px to 76px
@@ -52,7 +55,7 @@ $laptop-large: 'screen and (min-width: #{$laptop-large-min})';
 }
 @mixin book-now-button() {
 	text-decoration: none;
-	border: 1px solid rgb(89, 127, 165);
+	// border: 1px solid rgb(89, 127, 165);
 	color: rgba(245, 245, 245, 0.9);
 	font-size: 1.3rem;
 	padding: 1% 2.5vw;
@@ -60,7 +63,7 @@ $laptop-large: 'screen and (min-width: #{$laptop-large-min})';
 	justify-content: center;
 	margin-right: 6%;
 	border-radius: 4px;
-	background-color: rgb(49, 110, 185);
+	background-color: $main-purple;
 	transition: all 400ms;
 	opacity: 0.9;
 

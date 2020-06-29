@@ -7,10 +7,6 @@
 		border-radius: 5px;
 		margin-top: 50px;
 	}
-	&__left-img {
-		width: 50%;
-		border-radius: 3px;
-	}
 	@include mobile-small-only() {
 		&__left-img {
 			display: none;
