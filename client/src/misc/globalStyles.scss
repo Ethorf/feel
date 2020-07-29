@@ -1,4 +1,4 @@
-$main-blue: rgb(63, 123, 194);
+$main-blue: rgb(38, 95, 165);
 $main-purple: rgb(99, 54, 202);
 
 $black-text-color: #323232;
@@ -64,7 +64,7 @@ $laptop-large: 'screen and (min-width: #{$laptop-large-min})';
 	margin-right: 6%;
 	border-radius: 4px;
 	// background-color: $main-purple;
-	background-color: rgb(87, 171, 223);
+	background-color: $main-blue;
 	transition: all 400ms;
 	opacity: 0.9;
 
