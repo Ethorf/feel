@@ -8,7 +8,6 @@
 	padding-top: 50px;
 	padding-bottom: 80px;
 	position: relative;
-	// border-radius: 5px;
 	z-index: 5;
 	background-color: white;
 	&__gradient {
@@ -23,11 +22,9 @@
 		@include scrimGradient();
 		transform: rotate(180deg);
 		opacity: 0.99;
-		// margin-bottom: 100px;
 	}
 	&__headshot {
 		width: 30%;
-		// height: auto;
 		height: 10%;
 		border-radius: 4px;
 		margin-top: 60px;
@@ -46,7 +43,6 @@
 	&__header {
 		color: $main-blue;
 		font-size: 3.5em;
-		// margin-top: 80px;
 		margin-bottom: 30px;
 		position: relative;
 	}
@@ -60,7 +56,7 @@
 		&:after {
 			content: '';
 			position: absolute;
-			width: 120%;
+			width: 80%;
 			height: 2px;
 			bottom: -70px;
 			right: 0%;

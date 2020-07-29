@@ -63,7 +63,8 @@ $laptop-large: 'screen and (min-width: #{$laptop-large-min})';
 	justify-content: center;
 	margin-right: 6%;
 	border-radius: 4px;
-	background-color: $main-purple;
+	// background-color: $main-purple;
+	background-color: rgb(87, 171, 223);
 	transition: all 400ms;
 	opacity: 0.9;
 

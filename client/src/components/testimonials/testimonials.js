@@ -17,16 +17,14 @@ export default function Testimonials(props) {
 	let testimonialData = [
 		{
 			content:
-				"Bra massage som löser upp spänningar i muskler, en avslappnande behandling som ger ny energi och rörlighet, kan varmt rekommendera Kelsey's massage.",
-			name: 'Edvard Sörensen'
-		},
-
-		{
-			content:
 				"Kelsey has a way of making you feel warm, welcomed and comfortable in her classes. She has a gorgeous voice and her flows are so creative. You'll leave Kelsey's class feeling like you've had a great workout and huge cuddle at the same time. <3",
 			name: 'Cheryl Reid '
 		},
-
+		{
+			content:
+				"Bra massage som löser upp spänningar i muskler, en avslappnande behandling som ger ny energi och rörlighet, kan varmt rekommendera Kelsey's massage.",
+			name: 'Edvard Sörensen'
+		},
 		{ content: 'Kan varmt rekommenderas!', name: 'Ulla Kleberg' },
 		{
 			content:
@@ -43,6 +41,7 @@ export default function Testimonials(props) {
 					.to(testimonialContainer, { delay: 0.4, duration: 0.7, autoAlpha: 1, ease: 'Power1.easeIn' })
 					.play()
 			);
+
 			setTimeout(() => {
 				setCounter(++counter);
 				setActiveTestimonial(testimonialData[counter]);
@@ -58,6 +57,7 @@ export default function Testimonials(props) {
 					.to(testimonialContainer, { delay: 0.4, duration: 0.7, autoAlpha: 1, ease: 'Power1.easeIn' })
 					.play()
 			);
+
 			setTimeout(() => {
 				setCounter(--counter);
 				setActiveTestimonial(testimonialData[counter]);
@@ -65,22 +65,14 @@ export default function Testimonials(props) {
 		}
 		setActiveTestimonial(testimonialData[counter]);
 	};
-	console.log(testimonialData.indexOf(activeTestimonial));
 	return (
 		<div className="testimonials">
 			<div className="testimonials__gradient"></div>
-			<img
-				// style={{ top: 0 + offset - 1432 }}
-
-				className="testimonials__bg-img"
-				src={Dock}
-				alt="Dock Image"
-			></img>
+			<img className="testimonials__bg-img" src={Dock} alt="Dock Image"></img>
 			<div className="testimonials__bg-overlay"></div>
 			<div className="testimonials__content-container">
-				{/* <h2 className="testimonials__title">What Friends Have To Say</h2> */}
 				<div className="testimonials__arrows-content-container">
-					<p data-aos="fade-in " className="testimonials__arrow" onClick={previous}>
+					<p className="testimonials__arrow" onClick={previous}>
 						{' '}
 						{`<`}{' '}
 					</p>
@@ -90,7 +82,7 @@ export default function Testimonials(props) {
 						</p>
 						<p className="testimonials__name">-{activeTestimonial.name}-</p>
 					</div>
-					<p data-aos="fade-in " onClick={next} className="testimonials__arrow">
+					<p onClick={next} className="testimonials__arrow">
 						{' '}
 						{`>`}{' '}
 					</p>
