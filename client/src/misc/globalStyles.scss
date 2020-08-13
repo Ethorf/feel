@@ -1,4 +1,4 @@
-$main-blue: rgb(38, 95, 165);
+$main-blue: #1fb7de;
 $main-purple: rgb(99, 54, 202);
 
 $black-text-color: #323232;
@@ -55,7 +55,6 @@ $laptop-large: 'screen and (min-width: #{$laptop-large-min})';
 }
 @mixin book-now-button() {
 	text-decoration: none;
-	// border: 1px solid rgb(89, 127, 165);
 	color: rgba(245, 245, 245, 0.9);
 	font-size: 1.3rem;
 	padding: 1% 2.5vw;
@@ -63,7 +62,7 @@ $laptop-large: 'screen and (min-width: #{$laptop-large-min})';
 	justify-content: center;
 	margin-right: 6%;
 	border-radius: 4px;
-	// background-color: $main-purple;
+	font-family: 'Aladin', cursive;
 	background-color: $main-blue;
 	transition: all 400ms;
 	opacity: 0.9;

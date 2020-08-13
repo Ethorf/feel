@@ -35,18 +35,17 @@ export const Massage = () => {
 							Pricing
 						</h2>
 						<p className="default-page__price" data-aos="fade-in">
-							<span className="default-page__time">75 mins -> </span>560kr{' '}
+							<span className="default-page__time">75 mins -> </span>600kr{' '}
 						</p>
 						<p className="default-page__price" data-aos="fade-in">
-							{' '}
 							<span className="default-page__time" data-aos="fade-in">
 								{' '}
 								90 mins ->
 							</span>{' '}
-							600kr{' '}
+							650kr{' '}
 						</p>
 						<p className="default-page__price" data-aos="fade-in">
-							<span className="default-page__time"> 120mins -> </span>800kr{' '}
+							<span className="default-page__time"> 120mins -> </span>1000kr{' '}
 						</p>
 						<p
 							className="default-page__sub-description default-page__sub-description-paragraph-1"
