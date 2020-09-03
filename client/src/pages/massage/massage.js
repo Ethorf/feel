@@ -64,8 +64,4 @@ export const Massage = () => {
 	);
 };
 
-const mapStateToProps = (state) => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Massage);
+export default Massage;

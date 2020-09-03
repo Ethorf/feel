@@ -5,8 +5,9 @@ const compression = require('compression');
 const app = express();
 const path = require('path');
 const cors = require('cors');
-app.use(compression());
+const pool = require('./db');
 
+app.use(compression());
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

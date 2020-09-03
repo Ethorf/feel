@@ -50,6 +50,7 @@ router.post('/updatePost/:id', authorize, async (req, res) => {
 		res.json(post);
 	} catch (err) {
 		console.error(err.message);
+		d;
 		res.status(500).send('Server error');
 	}
 });
