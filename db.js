@@ -7,7 +7,6 @@ const pool = new Pool({
 	ssl: true
 });
 
-pool.connect();
 pool.on('connect', () => {
 	console.log('connected to the feel db');
 });

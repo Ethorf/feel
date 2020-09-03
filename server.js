@@ -6,7 +6,7 @@ const app = express();
 const path = require('path');
 const cors = require('cors');
 const pool = require('./db');
-
+pool.connect();
 app.use(compression());
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
