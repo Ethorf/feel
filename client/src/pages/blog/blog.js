@@ -11,7 +11,7 @@ export const Blog = () => {
 	const [blogPosts, setBlogPosts] = useState(null);
 	const getBlogPosts = async () => {
 		try {
-			const res = await axios.get('http://localhost:8083/blog/getAllPosts');
+			const res = await axios.get('/blog/getAllPosts');
 			await setBlogPosts(res.data);
 			console.log(blogPosts);
 		} catch (err) {

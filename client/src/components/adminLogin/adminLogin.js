@@ -10,7 +10,7 @@ export default function AdminLogin({ setAuth, isAuthenticated }) {
 	const [blogPosts, setBlogPosts] = useState(null);
 	const getBlogPosts = async () => {
 		try {
-			const res = await axios.get('http://localhost:8083/blog/getAllPosts');
+			const res = await axios.get('/blog/getAllPosts');
 			await setBlogPosts(res.data);
 			console.log(blogPosts);
 		} catch (err) {
@@ -35,7 +35,7 @@ export default function AdminLogin({ setAuth, isAuthenticated }) {
 		e.preventDefault();
 		try {
 			const body = { email, password };
-			const response = await fetch('http://localhost:8083/auth/login', {
+			const response = await fetch('/auth/login', {
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json'
