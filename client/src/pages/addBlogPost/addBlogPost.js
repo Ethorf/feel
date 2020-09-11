@@ -20,7 +20,7 @@ export default function AddBlogPost({ setAuth, blogPosts, getBlogPosts }) {
 		e.preventDefault();
 		try {
 			const body = { title, content };
-			const response = await fetch('http://localhost:8083/blog/addNewPost', {
+			const response = await fetch('/blog/addNewPost', {
 				method: 'POST',
 				headers: {
 					'Content-type': 'application/json',
@@ -82,7 +82,9 @@ export default function AddBlogPost({ setAuth, blogPosts, getBlogPosts }) {
 			<button className={`add-blog-post__logout-button`} onClick={logout}>
 				Logout
 			</button>
-			<Link to="/">Home</Link>
+			<button className={`admin-login__home-link`}>
+				<Link to="/">Home</Link>
+			</button>
 		</div>
 	);
 }

@@ -54,7 +54,19 @@ const LandingNav = () => {
 				>
 					Yoga
 				</Link>
-
+				<Link
+					strict
+					exact
+					to="schedule"
+					className="landing-nav__schedule landing-nav__link"
+					activeClass="active"
+					spy={true}
+					smooth={true}
+					offset={-70}
+					duration={800}
+				>
+					Schedule
+				</Link>
 				<Link
 					strict
 					exact

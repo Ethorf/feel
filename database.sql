@@ -24,3 +24,19 @@ CREATE TABLE userstest(
   user_password VARCHAR(255) NOT NULL,
   PRIMARY KEY(user_id)
 );
+
+CREATE TABLE events(
+  id SERIAL,
+  title VARCHAR(255),
+  description TEXT, 
+  event_start TEXT,
+  event_end TEXT,
+  is_cancelled BOOLEAN,
+  PRIMARY KEY (post_id)
+);
+
+
+
+CREATE TABLE events(id SERIAL, title VARCHAR(255), description TEXT, eventstart TEXT, eventend TEXT, is_cancelled BOOLEAN, PRIMARY KEY (id));
+
+

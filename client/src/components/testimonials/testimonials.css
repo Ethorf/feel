@@ -1,0 +1,288 @@
+.invisible {
+  opacity: 0;
+  display: none;
+  width: 0.01vw;
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-animation: dnonefadeout 1s 1;
+          animation: dnonefadeout 1s 1;
+}
+
+@-webkit-keyframes dnonefadeout {
+  0% {
+    display: -webkit-box;
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: -webkit-box;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dnonefadeout {
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.visible {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -webkit-animation: dnonefadein 1s 1;
+          animation: dnonefadein 1s 1;
+  opacity: 1;
+}
+
+@-webkit-keyframes dnonefadein {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: -webkit-box;
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dnonefadein {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.testimonials {
+  font-family: 'Manrope', sans-serif;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 700px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.testimonials__gradient {
+  position: relative;
+  height: 220px;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(19%, rgba(255, 255, 255, 0.738)), color-stop(34%, rgba(255, 255, 255, 0.541)), color-stop(47%, rgba(255, 255, 255, 0.382)), color-stop(56.5%, rgba(255, 255, 255, 0.278)), color-stop(65%, rgba(255, 255, 255, 0.194)), color-stop(73%, rgba(255, 255, 255, 0.126)), color-stop(80.2%, rgba(255, 255, 255, 0.075)), color-stop(86.1%, rgba(255, 255, 255, 0.042)), color-stop(91%, rgba(255, 255, 255, 0.021)), color-stop(95.2%, rgba(255, 255, 255, 0.008)), color-stop(98.2%, rgba(255, 255, 255, 0.002)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.738) 19%, rgba(255, 255, 255, 0.541) 34%, rgba(255, 255, 255, 0.382) 47%, rgba(255, 255, 255, 0.278) 56.5%, rgba(255, 255, 255, 0.194) 65%, rgba(255, 255, 255, 0.126) 73%, rgba(255, 255, 255, 0.075) 80.2%, rgba(255, 255, 255, 0.042) 86.1%, rgba(255, 255, 255, 0.021) 91%, rgba(255, 255, 255, 0.008) 95.2%, rgba(255, 255, 255, 0.002) 98.2%, rgba(255, 255, 255, 0) 100%);
+  opacity: 1;
+  z-index: 5;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.testimonials__gradient-bottom {
+  position: relative;
+  height: 220px;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(19%, rgba(255, 255, 255, 0.738)), color-stop(34%, rgba(255, 255, 255, 0.541)), color-stop(47%, rgba(255, 255, 255, 0.382)), color-stop(56.5%, rgba(255, 255, 255, 0.278)), color-stop(65%, rgba(255, 255, 255, 0.194)), color-stop(73%, rgba(255, 255, 255, 0.126)), color-stop(80.2%, rgba(255, 255, 255, 0.075)), color-stop(86.1%, rgba(255, 255, 255, 0.042)), color-stop(91%, rgba(255, 255, 255, 0.021)), color-stop(95.2%, rgba(255, 255, 255, 0.008)), color-stop(98.2%, rgba(255, 255, 255, 0.002)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.738) 19%, rgba(255, 255, 255, 0.541) 34%, rgba(255, 255, 255, 0.382) 47%, rgba(255, 255, 255, 0.278) 56.5%, rgba(255, 255, 255, 0.194) 65%, rgba(255, 255, 255, 0.126) 73%, rgba(255, 255, 255, 0.075) 80.2%, rgba(255, 255, 255, 0.042) 86.1%, rgba(255, 255, 255, 0.021) 91%, rgba(255, 255, 255, 0.008) 95.2%, rgba(255, 255, 255, 0.002) 98.2%, rgba(255, 255, 255, 0) 100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.testimonials__bg-img {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+}
+
+.testimonials__bg-overlay {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  opacity: 0.5;
+  background-color: black;
+  height: 140%;
+  margin: 0;
+}
+
+.testimonials__content-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 4;
+  margin: 0;
+  width: 100%;
+}
+
+.testimonials__title {
+  color: white;
+  font-size: 2em;
+}
+
+.testimonials__arrows-content-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials__name-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  width: 60%;
+  height: 200px;
+}
+
+.testimonials__content {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.testimonials__name {
+  font-size: 1.5em;
+}
+
+.testimonials__arrow {
+  font-size: 3.5em;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+.testimonials__arrow:hover {
+  color: #1fb7de;
+  cursor: pointer;
+}
+
+.testimonials__dots-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  font-size: 2.9em;
+}
+
+.testimonials__dot {
+  margin: 0;
+  font-family: 'Noto sans';
+  color: grey;
+  margin: 35px 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonials {
+    height: 600px;
+  }
+  .testimonials__bg-img {
+    width: 300%;
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    height: 100%;
+  }
+  .testimonials__bg-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    opacity: 0.7;
+    background-color: black;
+    margin: 0;
+  }
+  .testimonials__gradient {
+    height: 81px;
+    background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(19%, rgba(255, 255, 255, 0.738)), color-stop(34%, rgba(255, 255, 255, 0.541)), color-stop(47%, rgba(255, 255, 255, 0.382)), color-stop(56.5%, rgba(255, 255, 255, 0.278)), color-stop(65%, rgba(255, 255, 255, 0.194)), color-stop(73%, rgba(255, 255, 255, 0.126)), color-stop(80.2%, rgba(255, 255, 255, 0.075)), color-stop(86.1%, rgba(255, 255, 255, 0.042)), color-stop(91%, rgba(255, 255, 255, 0.021)), color-stop(95.2%, rgba(255, 255, 255, 0.008)), color-stop(98.2%, rgba(255, 255, 255, 0.002)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0.738) 19%, rgba(255, 255, 255, 0.541) 34%, rgba(255, 255, 255, 0.382) 47%, rgba(255, 255, 255, 0.278) 56.5%, rgba(255, 255, 255, 0.194) 65%, rgba(255, 255, 255, 0.126) 73%, rgba(255, 255, 255, 0.075) 80.2%, rgba(255, 255, 255, 0.042) 86.1%, rgba(255, 255, 255, 0.021) 91%, rgba(255, 255, 255, 0.008) 95.2%, rgba(255, 255, 255, 0.002) 98.2%, rgba(255, 255, 255, 0) 100%);
+  }
+  .testimonials__content {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  .testimonials__dots-container {
+    position: relative;
+    bottom: -150px;
+  }
+  .testimonials__name {
+    font-size: 1.1em;
+  }
+  .testimonials__gradient-bottom {
+    height: 200px;
+  }
+}
+
+.inactive-dot {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.active-dot {
+  color: #1fb7de;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+/*# sourceMappingURL=testimonials.css.map */

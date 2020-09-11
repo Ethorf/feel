@@ -33,4 +33,12 @@
 	&__button {
 		@include book-now-button();
 	}
+	&__home-link {
+		@include book-now-button();
+		position: fixed;
+		top: 80px;
+		right: 5px;
+		padding: 10px;
+		text-decoration: none;
+	}
 }

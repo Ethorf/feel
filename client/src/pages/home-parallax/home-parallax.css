@@ -1,0 +1,287 @@
+.invisible {
+  opacity: 0;
+  display: none;
+  width: 0.01vw;
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-animation: dnonefadeout 1s 1;
+          animation: dnonefadeout 1s 1;
+}
+
+@-webkit-keyframes dnonefadeout {
+  0% {
+    display: -webkit-box;
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: -webkit-box;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dnonefadeout {
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.visible {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -webkit-animation: dnonefadein 1s 1;
+          animation: dnonefadein 1s 1;
+  opacity: 1;
+}
+
+@-webkit-keyframes dnonefadein {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: -webkit-box;
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dnonefadein {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home {
+  height: 100vh;
+  font-family: 'Manrope', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home__hero-container {
+  height: 100vh;
+  margin: 0;
+  top: 0vh;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+.home__hero-overlay-container {
+  position: fixed;
+  height: 100%;
+}
+
+.home__hero-overlay {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+  margin: 0;
+  padding: 0;
+  opacity: 0.3;
+  background-color: black;
+}
+
+.home__hero-overlay-2 {
+  position: absolute;
+  z-index: 5;
+  width: 80vw;
+  height: 100%;
+  top: 0%;
+  bottom: 0%;
+  opacity: 0.01;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(19%, rgba(0, 0, 0, 0.738)), color-stop(34%, rgba(0, 0, 0, 0.541)), color-stop(47%, rgba(0, 0, 0, 0.382)), color-stop(56.5%, rgba(51, 51, 51, 0.278)), color-stop(65%, rgba(0, 0, 0, 0.194)), color-stop(73%, rgba(0, 0, 0, 0.126)), color-stop(80.2%, rgba(0, 0, 0, 0.075)), color-stop(86.1%, rgba(0, 0, 0, 0.042)), color-stop(91%, rgba(0, 0, 0, 0.021)), color-stop(95.2%, rgba(0, 0, 0, 0.008)), color-stop(98.2%, rgba(0, 0, 0, 0.5)), to(black));
+  background-image: linear-gradient(black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(51, 51, 51, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.5) 98.2%, black 100%);
+}
+
+.home__hero-img {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100vw;
+}
+
+.home__hero-text-container {
+  z-index: 4;
+  position: absolute;
+  top: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  scroll-padding: 100px 0px 0px 100px;
+}
+
+.home__hero-title {
+  font-size: 4.7em;
+  color: white;
+  font-family: 'Rock Salt', cursive;
+  margin: 0;
+}
+
+.home__hero-subtitle {
+  color: white;
+  font-size: 1.9em;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.home__book-now {
+  text-decoration: none;
+  color: rgba(245, 245, 245, 0.9);
+  font-size: 1.3rem;
+  padding: 1% 2.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 6%;
+  border-radius: 4px;
+  font-family: 'Aladin', cursive;
+  background-color: #1fb7de;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  opacity: 0.9;
+  width: 45%;
+}
+
+.home__book-now:hover {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  color: white;
+  text-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06), 0 14.3px 17.9px rgba(0, 0, 0, 0.072);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 6.5px 10px rgba(0, 0, 0, 0.06), 0 14.3px 17.9px rgba(0, 0, 0, 0.072);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.home__down-arrow {
+  color: #3f5875;
+  position: absolute;
+  bottom: -50px;
+  z-index: 25;
+  font-size: 3.5em;
+  opacity: 0.5;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-weight: 300;
+  font-family: 'Manrope', sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  .home {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .home__hero-text-container {
+    top: -100px;
+    position: absolute;
+  }
+  .home__hero-container {
+    height: 100vh;
+    margin: 0;
+    top: 0vh;
+    right: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0;
+  }
+  .home__hero-title {
+    font-size: 3.5em;
+    color: white;
+    font-family: 'Rock Salt', cursive;
+    margin: 0;
+  }
+  .home__hero-subtitle {
+    color: white;
+    font-size: 1.4em;
+    opacity: 0.9;
+    font-weight: 300;
+  }
+  .home__book-now {
+    width: 65%;
+    padding: 5px 2%;
+  }
+  .home__hero-img {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 400%;
+  }
+}
+/*# sourceMappingURL=home-parallax.css.map */

@@ -1,0 +1,148 @@
+.invisible {
+  opacity: 0;
+  display: none;
+  width: 0.01vw;
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-animation: dnonefadeout 1s 1;
+          animation: dnonefadeout 1s 1;
+}
+
+@-webkit-keyframes dnonefadeout {
+  0% {
+    display: -webkit-box;
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: -webkit-box;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dnonefadeout {
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.visible {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -webkit-animation: dnonefadein 1s 1;
+          animation: dnonefadein 1s 1;
+  opacity: 1;
+}
+
+@-webkit-keyframes dnonefadein {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: -webkit-box;
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dnonefadein {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: 12;
+  }
+  .mobile-nav__hamburger {
+    position: fixed;
+    z-index: 14;
+    color: silver;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    font-size: 2em;
+    top: 10px;
+    right: 4%;
+    margin: 0;
+  }
+  .mobile-nav__container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(47%, rgba(0, 0, 0, 0.741)), color-stop(73%, rgba(0, 0, 0, 0.526)), color-stop(80.2%, rgba(0, 0, 0, 0.075)), color-stop(86.1%, rgba(0, 0, 0, 0.042)), color-stop(91%, rgba(0, 0, 0, 0.021)), color-stop(95.2%, rgba(0, 0, 0, 0.008)), color-stop(98.2%, rgba(0, 0, 0, 0.002)), to(rgba(0, 0, 0, 0)));
+    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.741) 47%, rgba(0, 0, 0, 0.526) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, rgba(0, 0, 0, 0) 100%);
+    top: 0%;
+    height: 80%;
+    z-index: 13;
+    width: 100%;
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+  }
+  .mobile-nav__container:after {
+    display: none;
+  }
+  .mobile-nav__link {
+    font-size: 1.5em;
+    margin: 5px 0;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .active::before {
+    width: 0;
+  }
+}
+/*# sourceMappingURL=mobileNav.css.map */

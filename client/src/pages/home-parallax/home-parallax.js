@@ -5,11 +5,14 @@ import './home-parallax.scss';
 import hero from '../../assets/images/lake-3.jpeg';
 import LandingNav from '../../components/landingNav/landingNav';
 import MobileNav from '../../components/mobileNav/mobileNav';
+//Page Imports
 import About from '../../pages/about/about.js';
 import Yoga from '../../pages/yoga/yoga.js';
 import Massage from '../../pages/massage/massage.js';
 import Contact from '../../pages/contact/contact.js';
 import Blog from '../../pages/blog/blog.js';
+import Schedule from '../../pages/schedule/schedule.js';
+
 import AOS from 'aos';
 
 export const HomeParallax = () => {
@@ -66,6 +69,7 @@ export const HomeParallax = () => {
 			<Massage dark={true} id="massage" />
 			<Yoga dark={true} id="yoga" />
 			<Contact dark={true} id="contact" />
+			<Schedule dark={true} id="contact" />
 			<Blog dark={true} id="blog" />
 		</div>
 	);

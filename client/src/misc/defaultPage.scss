@@ -112,25 +112,25 @@
 		width: 100%;
 		background-color: white;
 		// border: 1px solid black;
-		&:after {
-			content: '';
-			position: absolute;
-			z-index: 6;
-			width: 40%;
-			height: 2px;
-			bottom: -25px;
-			right: 30%;
-			border-radius: 5px;
-			background: linear-gradient(
-				90deg,
-				rgba(255, 255, 255, 0.5) 0%,
-				rgba(89, 127, 165, 1) 15%,
-				rgba(89, 127, 165, 1) 85%,
-				rgba(255, 255, 255, 0.5) 100%
-			);
-			opacity: 0.5;
-			transition: all 0.7s ease-in-out 0s;
-		}
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	z-index: 6;
+		// 	width: 40%;
+		// 	height: 2px;
+		// 	bottom: -25px;
+		// 	right: 30%;
+		// 	border-radius: 5px;
+		// 	background: linear-gradient(
+		// 		90deg,
+		// 		rgba(255, 255, 255, 0.5) 0%,
+		// 		rgba(89, 127, 165, 1) 15%,
+		// 		rgba(89, 127, 165, 1) 85%,
+		// 		rgba(255, 255, 255, 0.5) 100%
+		// 	);
+		// 	opacity: 0.5;
+		// 	transition: all 0.7s ease-in-out 0s;
+		// }
 	}
 	@include mobile-small-only() {
 		display: flex;

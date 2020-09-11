@@ -4,8 +4,9 @@ import { CSSTransition } from 'react-transition-group';
 import './App.css';
 import Nav from './components/nav/nav.js';
 import HomeParallax from './pages/home-parallax/home-parallax.js';
-
+//Page Component Imports
 import Massage from './pages/massage/massage.js';
+import Schedule from './pages/schedule/schedule.js';
 import Yoga from './pages/yoga/yoga.js';
 import Contact from './pages/contact/contact.js';
 import About from './pages/about/about.js';
@@ -18,13 +19,14 @@ const routes = [
 	{ path: '/yoga', name: 'Yoga', Component: Yoga },
 	{ path: '/about', name: 'About', Component: About },
 	{ path: '/contact', name: 'Contact', Component: Contact },
+	{ path: '/schedule', name: 'Schedule', Component: Schedule },
 	{ path: '/blog', name: 'Blog', Component: Blog },
 	{ path: '/adminLogin', name: 'AdminLogin', Component: AdminLogin }
 ];
 function App() {
 	const checkAuthenticated = async () => {
 		try {
-			const res = await fetch('http://localhost:8083/authentication/verify', {
+			const res = await fetch('/authentication/verify', {
 				method: 'POST',
 				headers: { jwt_token: localStorage.token }
 			});

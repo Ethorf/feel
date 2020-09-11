@@ -1,0 +1,215 @@
+.invisible {
+  opacity: 0;
+  display: none;
+  width: 0.01vw;
+  overflow: hidden;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-animation: dnonefadeout 1s 1;
+          animation: dnonefadeout 1s 1;
+}
+
+@-webkit-keyframes dnonefadeout {
+  0% {
+    display: -webkit-box;
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: -webkit-box;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dnonefadeout {
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.visible {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -webkit-animation: dnonefadein 1s 1;
+          animation: dnonefadein 1s 1;
+  opacity: 1;
+}
+
+@-webkit-keyframes dnonefadein {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: -webkit-box;
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dnonefadein {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 10vw;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200%;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 5%;
+  position: relative;
+  border-radius: 3px;
+  z-index: 5;
+  background-color: white;
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+}
+
+.blog__admin-login-button {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 0.9rem;
+  padding: 1% 1%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 5px;
+  margin-right: 6%;
+  color: black;
+}
+
+.blog__login-icon {
+  height: 20px;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .blog {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 10%;
+  }
+}
+
+.blog-post {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blog-post__title-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.blog-post__title-date:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), color-stop(15%, #597fa5), color-stop(85%, #597fa5), to(rgba(255, 255, 255, 0.5)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, #597fa5 15%, #597fa5 85%, rgba(255, 255, 255, 0.5) 100%);
+  opacity: 0.7;
+  -webkit-transition: all 0.7s ease-in-out 0s;
+  transition: all 0.7s ease-in-out 0s;
+}
+
+.blog-post__date {
+  font-weight: 400;
+}
+
+.blog-post__content {
+  margin-bottom: 50px;
+  font-size: 1.2em;
+  text-align: left;
+  width: 100%;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 767px) {
+  .blog-post {
+    width: 75%;
+  }
+  .blog-post__title-date {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .blog-post__title {
+    text-align: left;
+  }
+  .blog-post__date {
+    margin-left: 10px;
+  }
+  .blog-post__content {
+    font-size: 1.3em;
+  }
+}
+/*# sourceMappingURL=blog.css.map */

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import AddBlogPost from '../../pages/addBlogPost/addBlogPost.js';
+import EditEvents from '../../components/EditEvents/EditEvents.js';
 import './adminLogin.scss';
 import '../../misc/defaultPage.scss';
 import axios from 'axios';
@@ -12,7 +13,6 @@ export default function AdminLogin({ setAuth, isAuthenticated }) {
 		try {
 			const res = await axios.get('/blog/getAllPosts');
 			await setBlogPosts(res.data);
-			console.log(blogPosts);
 		} catch (err) {
 			console.log('error getting blog posts');
 		}
@@ -87,11 +87,16 @@ export default function AdminLogin({ setAuth, isAuthenticated }) {
 						</div>
 					</div>
 					<button className={`admin-login__button`}>Login</button>
-					<Link to="/">Home</Link>
+					<button className={`admin-login__home-link`}>
+						<Link to="/">Home</Link>
+					</button>
 				</form>
 			</div>
 			{isAuthenticated ? (
-				<AddBlogPost getBlogPosts={getBlogPosts} blogPosts={blogPosts} setAuth={setAuth} />
+				<>
+					<EditEvents />
+					<AddBlogPost getBlogPosts={getBlogPosts} blogPosts={blogPosts} setAuth={setAuth} />
+				</>
 			) : null}
 		</div>
 	);

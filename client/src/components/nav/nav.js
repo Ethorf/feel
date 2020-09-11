@@ -19,7 +19,6 @@ const Nav = () => {
 	const scrollToTop = () => {
 		scroll.scrollToTop();
 	};
-	console.log(offset);
 	return (
 		<nav className={` ${window.innerWidth >= 768 ? (scrolled ? 'visible' : 'invisible') : null} nav`}>
 			<div className="nav__container">
@@ -69,6 +68,17 @@ const Nav = () => {
 					duration={800}
 				>
 					Contact
+				</Link>
+				<Link
+					to="schedule"
+					className="nav__schedule nav__link"
+					activeClass="active"
+					spy={true}
+					smooth={true}
+					offset={-10}
+					duration={800}
+				>
+					Schedule
 				</Link>
 				<Link
 					spy={true}

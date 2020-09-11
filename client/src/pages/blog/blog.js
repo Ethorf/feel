@@ -1,6 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
 import axios from 'axios';
-
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './blog.scss';
@@ -13,7 +12,6 @@ export const Blog = () => {
 		try {
 			const res = await axios.get('/blog/getAllPosts');
 			await setBlogPosts(res.data);
-			console.log(blogPosts);
 		} catch (err) {
 			console.log('error getting blog posts');
 		}

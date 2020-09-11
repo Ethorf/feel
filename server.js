@@ -16,6 +16,7 @@ app.use(express.json({ extended: false }));
 
 app.use('/auth', require('./routes/jwtAuth'));
 app.use('/blog', require('./routes/blogPosts'));
+app.use('/events', require('./routes/events'));
 
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));

@@ -3,8 +3,6 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 import './mobileNav.scss';
 
 const MobileNav = () => {
-	const [offset, setOffset] = useState(0);
-	const [scrolled, setScrolled] = useState(false);
 	const [navOpen, setNavOpen] = useState(false);
 
 	return (
@@ -60,6 +58,19 @@ const MobileNav = () => {
 						onClick={() => setNavOpen(!navOpen)}
 					>
 						Contact
+					</Link>
+					<Link
+						strict
+						exact
+						to="schedule"
+						className="mobile-nav__contact mobile-nav__link"
+						spy={true}
+						smooth={true}
+						offset={-70}
+						duration={800}
+						onClick={() => setNavOpen(!navOpen)}
+					>
+						Schedule
 					</Link>
 					<Link
 						spy={true}
