@@ -4,7 +4,6 @@
 	display: flex;
 	width: 100%;
 	flex-direction: column;
-	// align-items: center;
 	&__calendar-container {
 		width: 70%;
 		height: 70%;
@@ -15,6 +14,28 @@
 		align-items: center;
 		height: 300px;
 		padding: 40px;
+	}
+	&__calendar-event-title {
+		margin: 0;
+		margin-top: 5px;
+		display: flex;
+		justify-content: center;
+	}
+	&__description-modal-container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 25px;
+		display: 1;
+	}
+	&__close-button {
+		position: absolute;
+		top: -22px;
+		right: 5px;
+		&:hover {
+			color: red;
+			cursor: pointer;
+		}
 	}
 }
 .rbc-event-cancelled {

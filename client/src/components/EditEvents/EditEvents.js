@@ -22,15 +22,16 @@ export default function EditEvents() {
 		title: '',
 		date: '',
 		eventstart: '',
-		eventend: ''
+		eventend: '',
+		description: ''
 	});
-	const { title, date } = eventFormInputs;
+	const { title, date, description } = eventFormInputs;
 	let eventstart = moment(`${date} ${eventFormInputs.eventstart}`).toDate();
 	let eventend = moment(`${date} ${eventFormInputs.eventend}`).toDate();
 	const onChange = (e) => setEventFormInputs({ ...eventFormInputs, [e.target.name]: e.target.value });
 	const addEvent = async () => {
 		try {
-			const body = { title, eventstart, eventend };
+			const body = { title, eventstart, eventend, description };
 			const response = await fetch('/events/newEvent', {
 				method: 'POST',
 				headers: {
@@ -45,13 +46,13 @@ export default function EditEvents() {
 	};
 
 	const submitForm = async (e) => {
-		e.preventDefault();
 		await addEvent();
 		setEventFormInputs({
 			title: '',
 			date: '',
 			eventstart: '',
-			eventend: ''
+			eventend: '',
+			description: ''
 		});
 	};
 
@@ -148,12 +149,12 @@ export default function EditEvents() {
 	console.log(activeEvents);
 	return (
 		<div className={`edit-events`}>
-			<h1>Add Event</h1>
-			<form onSubmit={submitForm} className="schedule__add-event-form">
+			<h1>Events</h1>
+			<form onSubmit={submitForm} className="create-event__form">
 				<h2>Create Event</h2>
 				<input
 					placeholder="title"
-					className={`schedule__title-input`}
+					className={`create-event__title-input`}
 					type="title"
 					name="title"
 					onChange={(e) => onChange(e)}
@@ -197,6 +198,14 @@ export default function EditEvents() {
 					}}
 					onChange={(e) => onChange(e)}
 				/>
+				<textarea
+					className="create-event__form-description"
+					label="Description"
+					type="description"
+					name="description"
+					onChange={(e) => onChange(e)}
+					defaultValue="event description"
+				></textarea>
 				<button type="submit">Create</button>
 			</form>
 			<h1>Edit Events</h1>

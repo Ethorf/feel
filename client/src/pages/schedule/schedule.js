@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import axios from 'axios';
+import { Dialog } from '@material-ui/core';
 //Styles Imports
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './schedule.scss';
@@ -10,17 +11,38 @@ const Schedule = () => {
 	let myEvents = [
 		{
 			title: 'Yoga',
-			eventstart: moment(`2020-09-8 09:00`).toDate(),
-			eventend: moment(`2020-09-8 10:00`).toDate()
+			eventstart: moment(`2020-09-15 09:00`).toDate(),
+			eventend: moment(`2020-09-15 12:00`).toDate(),
+			description: 'Come yoga with billy',
+			id: 900000
 		}
 	];
 	const [activeEvents, setActiveEvents] = useState(myEvents);
 	const localizer = momentLocalizer(moment);
 
 	const CustomEvent = (props) => {
+		const [descriptionModalOpen, setDescriptionModalOpen] = useState(false);
+		console.log(props);
 		return (
-			<div>
+			<div onClick={() => setDescriptionModalOpen(!descriptionModalOpen)}>
+				<Dialog open={descriptionModalOpen}>
+					<div className="schedule__description-modal-container">
+						<div className="schedule__description-modal-time-container">
+							<span>{moment(props.event.eventstart).format('hh:mma').toString()}</span>-
+							<span>{moment(props.event.eventend).format('hh:mma MMM do').toString()}</span>
+						</div>
+
+						<p>{props.event.description}</p>
+						<h2
+							className="schedule__close-button"
+							onClick={() => setDescriptionModalOpen(!descriptionModalOpen)}
+						>
+							x
+						</h2>
+					</div>
+				</Dialog>
 				<h4
+					className="schedule__calendar-event-title"
 					style={
 						props.event.is_cancelled === true
 							? { textDecoration: 'line-through' }

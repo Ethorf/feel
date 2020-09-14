@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import './home-parallax.scss';
 import hero from '../../assets/images/lake-3.jpeg';
@@ -75,8 +74,4 @@ export const HomeParallax = () => {
 	);
 };
 
-const mapStateToProps = (state) => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeParallax);
+export default HomeParallax;

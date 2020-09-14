@@ -1,14 +1,40 @@
 @import '../../misc/globalStyles.scss';
 
-.event {
+.edit-events {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 	align-items: center;
+
 	&__info {
-		// border: 1px solid red;
 		width: 42%;
 		display: flex;
 		justify-content: space-between;
+	}
+	&__add-event-form {
+		padding: 0;
+	}
+}
+.create-event {
+	&__form {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		width: 60%;
+	}
+	&__form-description {
+		margin: 20px 0;
+		height: 100px;
+		border-radius: 3px;
+		resize: none;
+		padding: 5px;
+	}
+	&__title-input {
+		margin: 20px 0;
+		width: 20%;
+		border-radius: 3px;
+		border: 1px solid black;
+		padding: 5px;
 	}
 }
